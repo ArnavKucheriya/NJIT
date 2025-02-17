@@ -1,0 +1,71 @@
+Test Case: infile1
+
+Input Data:
+
+
+Expected Output:
+NO SPECIFIED INPUT FILE NAME.
+
+==================================================
+Test Case: infile2
+
+Input Data:
+# Simple array constructs.
+@fred = ("How", "are", "you", "today?");
+print "\@fred contains ( @fred ).\n";
+
+$mike = $fred[1];
+print " $mike $fred [3]\n";
+
+# The array name in a scalar context gives the size.
+$fredsize = @fred;
+print ' @fred has ', " $fredsize elements.\n";
+
+# The $#name gives the max subscript (size less one).
+print "Max sub is $#fred\n";
+
+
+Expected Output:
+CANNOT OPEN THE FILE myfile
+
+==================================================
+Test Case: infile3
+
+Input Data:
+# Various operations on scalar (string) variables.
+$fred = "Fred here";
+$barney = 56;
+$sum = 10 + $barney ;
+print 'The variable $fred' . " contains $fred. \n";
+print "Sum is $sum. \n";
+@fred_ = ("How", "are", "you", "today?");
+@vector = (3, 5, 7, 12, 25);
+if ( $sum == 100 ) then print @vec.tor else continue ;
+while value is less than 50 apply case one and end the processing.
+
+
+Expected Output:
+The File is Empty.
+
+==================================================
+Test Case: infile4
+
+Input Data:
+begin formatting a paragraph with italic form @
+An International Standard Book Number (ISBN) is a code of 
+%10 characters, referred to in this case as the class $ ISBN-10 , 
+separated by dashes such as private number $0-7637-0798-8 
+$End the formatting 
+begin
+% If the ISBN number starts with ISBN-10 it consists of four parts: 
+group code, a publisher code, a code that uniquely identifies the book among those published by 
+a particular publisher, and a check character. 
+The check character is used to validate an ISBN. For the ISBN 0-7637-0798-8, the group code is 0, 
+which identifies the book as one from an English-speaking country. 
+While the %publisher code @_ 7637 is for @Jones and @Bartlett Publishers 
+
+
+Expected Output:
+Total number of words: 61
+
+==================================================

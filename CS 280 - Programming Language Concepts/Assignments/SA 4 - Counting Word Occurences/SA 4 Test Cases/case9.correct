@@ -1,0 +1,25 @@
+Invalid Special Word: $0-7637-0798-8
+Total Number of Lines: 13
+Number of Words: 118
+Number of Special Words: 8
+Number of Identifiers: 84
+Number of Keywords: 9
+
+List of Special Words and their number of occurrences:
+$: 1
+$End: 1
+%10: 1
+%publisher: 1
+@: 1
+@Bartlett: 1
+@Jones: 1
+@_: 1
+
+List of Keywords and their number of occurrences:
+begin: 2
+case: 1
+class: 1
+for: 2
+if: 1
+private: 1
+while: 1

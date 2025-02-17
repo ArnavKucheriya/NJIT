@@ -1,0 +1,10 @@
+# Various operations on scalar (string) variables.
+$fred = "Fred here";
+$barney = 56;
+$sum = 10 + $barney ;
+print 'The variable $fred' . " contains $fred. \n";
+print "Sum is $sum. \n";
+@fred_ = ("How", "are", "you", "today?");
+@vector = (3, 5, 7, 12, 25);
+if ( $sum == 100 ) then print @vec.tor else continue ;
+while value is less than 50 apply case one and end the processing.

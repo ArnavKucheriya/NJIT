@@ -1,0 +1,8 @@
+Invalid Special Word at line 5: $fred'
+Invalid Special Word at line 5: $fred.
+Invalid Special Word at line 6: $sum.
+Invalid Special Word at line 9: @vec.tor
+Total number of words: 72
+Number of Special Words Starting with $: 5
+Number of Special Words Starting with @: 2
+Number of Special Words Starting with %: 0

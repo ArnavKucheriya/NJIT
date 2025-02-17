@@ -1,0 +1,33 @@
+Invalid Special Word: $jones,
+Invalid Special Word: $johnson)
+Invalid Special Word: @a;
+Invalid Special Word: $johnson\n";
+Invalid Special Word: $there)
+Invalid Special Word: @a;
+Invalid Special Word: $there\n";
+Invalid Special Word: @a;
+Invalid Special Word: @a;
+Invalid Special Word: $q,
+Invalid Special Word: $r,
+Invalid Special Word: $s,
+Invalid Special Word: $t)
+Invalid Special Word: $q,
+Invalid Special Word: $r,
+Invalid Special Word: $s,
+Invalid Special Word: $t)
+Invalid Special Word: @a;
+Invalid Special Word: $bb)
+Invalid Special Word: $aa);
+Invalid Special Word: $bb\n";
+Total Number of Lines: 30
+Number of Words: 110
+Number of Special Words: 5
+Number of Identifiers: 30
+Number of Keywords: 0
+
+List of Special Words and their number of occurrences:
+$aa: 1
+$bb: 1
+$jones: 1
+$this: 1
+@a: 1

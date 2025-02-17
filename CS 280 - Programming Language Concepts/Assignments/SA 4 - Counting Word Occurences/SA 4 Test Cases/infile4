@@ -1,0 +1,13 @@
+begin formatting a paragraph with italic form @
+An International Standard Book Number (ISBN) is a code of 
+%10 characters, referred to in this case as the class $ ISBN-10 , 
+separated by dashes such as private number $0-7637-0798-8 
+$End the formatting 
+begin
+If the ISBN number starts with ISBN-10 it consists of four parts: 
+group code, a publisher code, a code that uniquely identifies the book among those published by 
+a particular publisher, and a check character. 
+The check character is used to validate an ISBN. For the ISBN 0-7637-0798-8, the group code is 0, 
+which identifies the book as one from an English-speaking country. 
+While the %publisher code @_ 7637 is for @Jones and @Bartlett Publishers  
+

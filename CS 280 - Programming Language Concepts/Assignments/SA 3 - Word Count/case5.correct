@@ -1,0 +1,14 @@
+Invalid Identifier Word at line 1: constructs.
+Invalid Special Word at line 5: $fred[1];
+Invalid Identifier Word at line 8: size.
+Invalid Special Word at line 9: @fred;
+Invalid Identifier Word at line 10: elements.\n";
+Invalid Special Word at line 12: $#name
+Invalid Identifier Word at line 12: one).
+Invalid Special Word at line 13: $#fred\n";
+Total number of words: 61
+Number of Keywords: 0
+Number of Identifiers: 25
+Number of Special Words Starting with $: 5
+Number of Special Words Starting with @: 3
+Number of Special Words Starting with %: 0

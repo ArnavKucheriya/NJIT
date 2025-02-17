@@ -1,0 +1,102 @@
+Invalid Identifier Word: strict;
+Invalid Identifier Word: files,
+Invalid Identifier Word: readable.
+Invalid Identifier Word: errors.
+Invalid Identifier Word: read.
+Invalid Identifier Word: message.
+Invalid Special Word: $fn.\n";
+Invalid Identifier Word: exist.\n";
+Invalid Identifier Word: other,
+Invalid Identifier Word: it's
+Invalid Identifier Word: bad.
+Invalid Identifier Word: problem,
+Invalid Identifier Word: out.
+Invalid Identifier Word: files.
+Invalid Identifier Word: file.
+Invalid Identifier Word: INFILE,
+Invalid Identifier Word: readable,
+Invalid Identifier Word: wrong.
+Invalid Identifier Word: It's
+Invalid Identifier Word: check.
+Invalid Special Word: $fn:
+Invalid Special Word: $!
+Invalid Identifier Word: next;
+Invalid Identifier Word: it.
+Invalid Identifier Word: INFILE;
+Total Number of Lines: 46
+Number of Words: 196
+Number of Special Words: 12
+Number of Identifiers: 90
+Number of Keywords: 12
+
+List of Special Words and their number of occurrences:
+$bad: 2
+$fn: 6
+$l: 2
+@ARGV: 2
+
+List of Identiers and their number of occurrences:
+Copy: 2
+File: 1
+It: 1
+One: 1
+Open: 1
+STDERR: 3
+See: 1
+This: 1
+We: 1
+a: 2
+all: 2
+also: 1
+and: 1
+any: 1
+are: 1
+bail: 1
+be: 1
+better: 1
+but: 2
+cannot: 1
+check: 1
+close: 1
+contents: 1
+do: 1
+does: 1
+each: 1
+error: 1
+exists: 2
+exit: 1
+file: 2
+first: 1
+foreach: 1
+goes: 1
+have: 1
+is: 2
+it: 2
+know: 1
+list: 1
+listed: 1
+my: 2
+not: 3
+of: 1
+open: 1
+or: 2
+permission: 1
+print: 4
+prints: 1
+read: 1
+safer: 1
+scans: 1
+script: 1
+shift: 1
+something: 1
+sometimes: 1
+stop: 1
+that: 1
+the: 7
+there: 2
+through: 1
+to: 3
+use: 1
+was: 1
+way: 1
+will: 1
