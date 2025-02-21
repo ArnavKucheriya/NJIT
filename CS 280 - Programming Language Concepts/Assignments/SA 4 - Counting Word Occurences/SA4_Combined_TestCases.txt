@@ -1,0 +1,270 @@
+=== infile3 ===
+use strict;
+
+# 
+# This script also prints the contents of all the listed files, but
+# it first scans through the list to check that each file exists and
+# is readable.  It will stop if there are any errors.
+#
+
+my $bad = 0;
+foreach my $fn ( @ARGV ) {
+    if (! -r $fn ) {
+        # File cannot be read.  See if it exists or not for a better 
+        # error message.
+        if (-e $fn ) {
+            print STDERR "You do not have permission to read $fn.\n";
+        } else {
+            print STDERR "File $fn does not exist.\n";
+        }
+
+        # One way or the other, it's bad.
+        $bad = 1;
+    }
+}
+
+# If there was a problem, bail out.
+if ($bad) { exit 2; }
+
+# Copy all the files.
+while (my $fn = shift @ARGV ) {
+
+    # Open the file.
+    if ( !open( INFILE, $fn )) {
+        # We know the file is readable, but sometimes something else goes 
+        # wrong.  It's safer to check.
+        print STDERR "Cannot open $fn: $! \n";
+        next;
+    }
+
+    # Copy it.
+    while (my $l = <INFILE>) {
+        print $l ;
+    }
+
+    close INFILE;
+}
+
+
+
+=== case8.correct ===
+Invalid Identifier Word: strict;
+Invalid Identifier Word: files,
+Invalid Identifier Word: readable.
+Invalid Identifier Word: errors.
+Invalid Identifier Word: read.
+Invalid Identifier Word: message.
+Invalid Special Word: $fn.\n";
+Invalid Identifier Word: exist.\n";
+Invalid Identifier Word: other,
+Invalid Identifier Word: it's
+Invalid Identifier Word: bad.
+Invalid Identifier Word: problem,
+Invalid Identifier Word: out.
+Invalid Identifier Word: files.
+Invalid Identifier Word: file.
+Invalid Identifier Word: INFILE,
+Invalid Identifier Word: readable,
+Invalid Identifier Word: wrong.
+Invalid Identifier Word: It's
+Invalid Identifier Word: check.
+Invalid Special Word: $fn:
+Invalid Special Word: $!
+Invalid Identifier Word: next;
+Invalid Identifier Word: it.
+Invalid Identifier Word: INFILE;
+Total Number of Lines: 46
+Number of Words: 196
+Number of Special Words: 12
+Number of Identifiers: 90
+Number of Keywords: 12
+
+List of Special Words and their number of occurrences:
+$bad: 2
+$fn: 6
+$l: 2
+@ARGV: 2
+
+List of Identiers and their number of occurrences:
+Copy: 2
+File: 1
+It: 1
+One: 1
+Open: 1
+STDERR: 3
+See: 1
+This: 1
+We: 1
+a: 2
+all: 2
+also: 1
+and: 1
+any: 1
+are: 1
+bail: 1
+be: 1
+better: 1
+but: 2
+cannot: 1
+check: 1
+close: 1
+contents: 1
+do: 1
+does: 1
+each: 1
+error: 1
+exists: 2
+exit: 1
+file: 2
+first: 1
+foreach: 1
+goes: 1
+have: 1
+is: 2
+it: 2
+know: 1
+list: 1
+listed: 1
+my: 2
+not: 3
+of: 1
+open: 1
+or: 2
+permission: 1
+print: 4
+prints: 1
+read: 1
+safer: 1
+scans: 1
+script: 1
+shift: 1
+something: 1
+sometimes: 1
+stop: 1
+that: 1
+the: 7
+there: 2
+through: 1
+to: 3
+use: 1
+was: 1
+way: 1
+will: 1
+
+
+=== infile4 ===
+begin formatting a paragraph with italic form @
+An International Standard Book Number (ISBN) is a code of 
+%10 characters, referred to in this case as the class $ ISBN-10 , 
+separated by dashes such as private number $0-7637-0798-8 
+$End the formatting 
+begin
+If the ISBN number starts with ISBN-10 it consists of four parts: 
+group code, a publisher code, a code that uniquely identifies the book among those published by 
+a particular publisher, and a check character. 
+The check character is used to validate an ISBN. For the ISBN 0-7637-0798-8, the group code is 0, 
+which identifies the book as one from an English-speaking country. 
+While the %publisher code @_ 7637 is for @Jones and @Bartlett Publishers  
+
+
+
+=== case9.correct ===
+Invalid Special Word: $0-7637-0798-8
+Total Number of Lines: 13
+Number of Words: 118
+Number of Special Words: 8
+Number of Identifiers: 84
+Number of Keywords: 9
+
+List of Special Words and their number of occurrences:
+$: 1
+$End: 1
+%10: 1
+%publisher: 1
+@: 1
+@Bartlett: 1
+@Jones: 1
+@_: 1
+
+List of Keywords and their number of occurrences:
+begin: 2
+case: 1
+class: 1
+for: 2
+if: 1
+private: 1
+while: 1
+
+
+=== case10.correct ===
+Invalid Identifier Word: characters,
+Invalid Identifier Word: ISBN-10
+Invalid Identifier Word: ISBN-10
+Invalid Identifier Word: parts:
+Invalid Identifier Word: code,
+Invalid Identifier Word: code,
+Invalid Identifier Word: publisher,
+Invalid Identifier Word: character.
+Invalid Identifier Word: ISBN.
+Invalid Identifier Word: English-speaking
+Invalid Identifier Word: country.
+Total Number of Lines: 13
+Number of Words: 118
+Number of Special Words: 8
+Number of Identifiers: 84
+Number of Keywords: 9
+
+List of Identiers and their number of occurrences:
+An: 1
+Book: 1
+ISBN: 2
+International: 1
+Number: 1
+Publishers: 1
+Standard: 1
+The: 1
+a: 6
+among: 1
+an: 2
+and: 2
+as: 3
+book: 2
+by: 2
+character: 1
+check: 2
+code: 4
+consists: 1
+dashes: 1
+form: 1
+formatting: 2
+four: 1
+from: 1
+group: 2
+identifies: 2
+in: 1
+is: 4
+it: 1
+italic: 1
+number: 2
+of: 2
+one: 1
+paragraph: 1
+particular: 1
+published: 1
+publisher: 1
+referred: 1
+separated: 1
+starts: 1
+such: 1
+that: 1
+the: 8
+this: 1
+those: 1
+to: 2
+uniquely: 1
+used: 1
+validate: 1
+which: 1
+with: 2
+
+
