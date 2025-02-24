@@ -1,0 +1,28 @@
+PLUS
+MULT
+EXP
+DIV
+MINUS
+CONCAT
+ASSOP
+GTHAN
+LTHAN
+EQ
+LPAREN
+RPAREN
+NEQ
+DIV
+MOD
+AND
+OR
+NOT
+COLON
+GTE
+LTE
+
+Lines: 7
+Total Tokens: 21
+Numerals: 0
+Characters and Strings : 0
+Identifiers: 0
+Keywords: 4

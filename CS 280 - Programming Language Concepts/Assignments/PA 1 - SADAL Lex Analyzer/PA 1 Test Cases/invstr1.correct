@@ -1,0 +1,8 @@
+SCONST: "Please type the coordinates of three points"
+SCONST: ""
+DIV
+DIV
+IDENT: <invalid>
+STRING
+CONST
+ERR: In line 4, Error Message { Invalid string constant "Its radius is'}

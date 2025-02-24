@@ -1,0 +1,15 @@
+
+Lines: 20
+Total Tokens: 104
+Numerals: 5
+Characters and Strings : 3
+Identifiers: 10
+Keywords: 13
+NUMERIC CONSTANTS:
+0, 1, 2, 3, 7
+CHARACTERS AND STRINGS:
+"Value of x= ", "Value of z= ", "Welcome"
+IDENTIFIERS:
+bing, ch, flag, prog1, str1, str2, w123, x, y_1, z
+KEYWORDS:
+if, put, putline, integer, float, character, string, boolean, procedure, end, is, begin, then

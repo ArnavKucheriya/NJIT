@@ -1,0 +1,29 @@
+ICONST: (3456)
+ICONST: (1025)
+MINUS
+ICONST: (1234)
+ICONST: (45e2)
+ICONST: (4321)
+PLUS
+ICONST: (125)
+ICONST: (25E-2)
+ICONST: (3)
+IDENT: <e>
+PLUS
+ICONST: (4)
+IDENT: <e>
+ICONST: (3)
+ICONST: (278)
+PLUS
+ICONST: (1025)
+ELSIF
+PROCEDURE
+
+Lines: 3
+Total Tokens: 20
+Numerals: 10
+Characters and Strings : 0
+Identifiers: 1
+Keywords: 2
+NUMERIC CONSTANTS:
+0.25, 3, 4, 125, 278, 1025, 1234, 3456, 4321, 4500

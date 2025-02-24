@@ -1,0 +1,11 @@
+
+Lines: 4
+Total Tokens: 71
+Numerals: 0
+Characters and Strings : 0
+Identifiers: 32
+Keywords: 12
+IDENTIFIERS:
+a, an, are, at, bool, can, char, computing, conditions, contains, correctness, error, formulas, from, int, it, keyboard, least, message, of, one, printing, program, results, satisfied, the, to, type, use, values, variables, you
+KEYWORDS:
+if, else, put, get, float, string, procedure, end, is, begin, then, and

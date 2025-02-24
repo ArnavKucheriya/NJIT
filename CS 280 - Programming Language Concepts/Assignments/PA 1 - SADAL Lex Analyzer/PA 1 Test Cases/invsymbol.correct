@@ -1,0 +1,12 @@
+IDENT: <a>
+IDENT: <program>
+IDENT: <contains>
+IDENT: <real>
+COMMA
+INT
+COMMA
+IDENT: <logical>
+AND
+CHAR
+IDENT: <variables>
+ERR: In line 1, Error Message {!}

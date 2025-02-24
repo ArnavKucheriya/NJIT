@@ -1,0 +1,4 @@
+A program contains float, int, bool, string and char type variables.
+You can use it to get from the keyboard values, then begin computing
+formulas and printing the results. If the conditions of correctness are true, then the procedure of computing is satisfied; else if at least one of the conditions
+is false put an error message and then end the program.

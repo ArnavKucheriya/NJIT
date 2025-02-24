@@ -1,0 +1,4 @@
+ICONST: (4321)
+DOT
+ICONST: (725)
+ERR: In line 2, Error Message { Invalid character constant 'Th'}

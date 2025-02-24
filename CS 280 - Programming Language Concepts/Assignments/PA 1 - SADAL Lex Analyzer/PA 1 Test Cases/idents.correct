@@ -1,0 +1,8 @@
+IDENT: <x1>
+COMMA
+IDENT: <y1>
+COMMA
+IDENT: <r_>
+ICONST: (2)
+IDENT: <x_>
+ERR: In line 1, Error Message {_}

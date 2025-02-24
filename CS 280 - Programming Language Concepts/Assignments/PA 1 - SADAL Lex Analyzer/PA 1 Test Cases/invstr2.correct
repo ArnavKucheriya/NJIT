@@ -1,0 +1,11 @@
+SCONST: "Please type the coordinates of three points"
+DIV
+DIV
+IDENT: <invalid>
+STRING
+CONST
+IDENT: <missing>
+IDENT: <closing>
+IDENT: <double>
+IDENT: <quotes>
+ERR: In line 4, Error Message { Invalid string constant "The center of the }

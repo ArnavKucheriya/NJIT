@@ -1,0 +1,39 @@
+IDENT: <a>
+IDENT: <program>
+IDENT: <contains>
+IDENT: <real>
+COMMA
+INT
+COMMA
+BOOL
+COMMA
+AND
+IDENT: <char>
+IDENT: <you>
+IDENT: <can>
+IDENT: <calculate>
+IDENT: <formulas>
+AND
+IDENT: <print>
+IDENT: <results>
+DOT
+THEN
+IDENT: <execute>
+IDENT: <the>
+IDENT: <right>
+IDENT: <statement>
+AND
+END
+IDENT: <the>
+IDENT: <program>
+
+Lines: 5
+Total Tokens: 28
+Numerals: 0
+Characters and Strings : 0
+Identifiers: 15
+Keywords: 5
+IDENTIFIERS:
+a, calculate, can, char, contains, execute, formulas, print, program, real, results, right, statement, the, you
+KEYWORDS:
+integer, boolean, end, then, and

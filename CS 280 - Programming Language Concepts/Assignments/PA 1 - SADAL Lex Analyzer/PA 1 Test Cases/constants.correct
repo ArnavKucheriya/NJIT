@@ -1,0 +1,27 @@
+ICONST: (235)
+SCONST: "Please type the coordinates of three points"
+FCONST: (15.25)
+MINUS
+ICONST: (125)
+BCONST: (true)
+ICONST: (12e-3)
+ICONST: (4321)
+MINUS
+FCONST: (0.725e+1)
+CCONST: 'Z'
+BCONST: (false)
+ICONST: (625)
+PLUS
+FCONST: (2.75)
+FCONST: (7.0E2)
+
+Lines: 7
+Total Tokens: 16
+Numerals: 9
+Characters and Strings : 2
+Identifiers: 0
+Keywords: 0
+NUMERIC CONSTANTS:
+0.012, 2.75, 7.25, 15.25, 125, 235, 625, 700, 4321
+CHARACTERS AND STRINGS:
+"Please type the coordinates of three points", "Z"

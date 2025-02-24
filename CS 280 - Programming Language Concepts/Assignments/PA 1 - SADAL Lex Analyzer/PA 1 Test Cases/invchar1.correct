@@ -1,0 +1,4 @@
+FCONST: (15.25)
+ICONST: (125)
+BCONST: (true)
+ERR: In line 2, Error Message {New line is an invalid character constant.}

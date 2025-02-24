@@ -1,0 +1,7 @@
+"Please type the coordinates of three points"
+	
+//Invalid string constant missing closing double quotes	
+	 "The center of the 
+	 circle through these points is" 
+	
+	 "Its radius is 
