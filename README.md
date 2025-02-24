@@ -27,6 +27,12 @@ Editor Used: Visual Studio Code (64-bits)
 - Textbook: _Data Structures & Algorithm Analysis in Java, Edition 3.2, by Clifford
 A. Shaffer 2011._
 
+### MATH 337 - Linear Algebra
+- Matrices, determinants, systems of linear equations, vector spaces, linear 
+transformations, eigenvalues, eigenvectors, and related topics.
+- Fall 2024 - Prof. Thi Phong Nguyen
+- Textbook: _A First Course in Linear Algebra (Kuttler) by Ken Kuttler._
+
 ### CS 241 - Foundations of Computer Science I
 - An introduction to formal logic, set theory, graph theory, and proof techniques essential for computer science applications.
 - Spring 2025 - Prof. Ayelet Zaidenberg
