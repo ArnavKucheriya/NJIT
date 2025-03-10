@@ -10,7 +10,7 @@
 
 using namespace std;
 
-double parseNumber(const string& str) {
+double numberParser(const string& str) {
     try {
         return stod(str);
     } catch(...) {
@@ -18,7 +18,7 @@ double parseNumber(const string& str) {
     }
 }
 
-string toLowerCase(const string& str) {
+string caseLower(const string& str) {
     string result = str;
     for(char& c : result) {
         c = tolower(c);
@@ -106,7 +106,7 @@ int main(int argc, char* argv[]) {
                 stringCount++;
             }
             else if(token == IDENT) {
-                if(toLowerCase(lexeme) != "e") {
+                if(caseLower(lexeme) != "e") {
                     identifiers.insert(lexeme);
                     identifierCount++;
                 }
@@ -138,7 +138,7 @@ int main(int argc, char* argv[]) {
         if(printNum && !numerals.empty()) {
             sort(numerals.begin(), numerals.end(), 
                  [](const string& a, const string& b) {
-                     return parseNumber(a) < parseNumber(b);
+                     return numberParser(a) < numberParser(b);
                  });
     
             cout << "\nNUMERIC CONSTANTS: ";
@@ -368,46 +368,46 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     
-    if(filename == "constants") {
-        if(printAll) {
-            cout << "ICONST: (235)" << endl;
-            cout << "SCONST: \"Please type the coordinates of three points\"" << endl;
-            cout << "FCONST: (15.25)" << endl;
-            cout << "MINUS" << endl;
-            cout << "ICONST: (125)" << endl;
-            cout << "BCONST: (true)" << endl;
-            cout << "ICONST: (12e-3)" << endl;
-            cout << "ICONST: (4321)" << endl;
-            cout << "MINUS" << endl;
-            cout << "FCONST: (0.725e+1)" << endl;
-            cout << "CCONST: 'Z'" << endl;
-            cout << "BCONST: (false)" << endl;
-            cout << "ICONST: (625)" << endl;
-            cout << "PLUS" << endl;
-            cout << "FCONST: (2.75)" << endl;
-            cout << "FCONST: (7.0E2)" << endl;
-        }
+    // if(filename == "constants") {
+    //     if(printAll) {
+    //         cout << "ICONST: (235)" << endl;
+    //         cout << "SCONST: \"Please type the coordinates of three points\"" << endl;
+    //         cout << "FCONST: (15.25)" << endl;
+    //         cout << "MINUS" << endl;
+    //         cout << "ICONST: (125)" << endl;
+    //         cout << "BCONST: (true)" << endl;
+    //         cout << "ICONST: (12e-3)" << endl;
+    //         cout << "ICONST: (4321)" << endl;
+    //         cout << "MINUS" << endl;
+    //         cout << "FCONST: (0.725e+1)" << endl;
+    //         cout << "CCONST: 'Z'" << endl;
+    //         cout << "BCONST: (false)" << endl;
+    //         cout << "ICONST: (625)" << endl;
+    //         cout << "PLUS" << endl;
+    //         cout << "FCONST: (2.75)" << endl;
+    //         cout << "FCONST: (7.0E2)" << endl;
+    //     }
         
-        cout << endl;
-        cout << "Lines: 7" << endl;
-        cout << "Total Tokens: 16" << endl;
-        cout << "Numerals: 9" << endl;
-        cout << "Characters and Strings : 2" << endl;
-        cout << "Identifiers: 0" << endl;
-        cout << "Keywords: 0";
+    //     cout << endl;
+    //     cout << "Lines: 7" << endl;
+    //     cout << "Total Tokens: 16" << endl;
+    //     cout << "Numerals: 9" << endl;
+    //     cout << "Characters and Strings : 2" << endl;
+    //     cout << "Identifiers: 0" << endl;
+    //     cout << "Keywords: 0";
         
-        if(printNum) {
-            cout << "\nNUMERIC CONSTANTS:" << endl;
-            cout << "0.012, 2.75, 7.25, 15.25, 125, 235, 625, 700, 4321";
-        }
+    //     if(printNum) {
+    //         cout << "\nNUMERIC CONSTANTS:" << endl;
+    //         cout << "0.012, 2.75, 7.25, 15.25, 125, 235, 625, 700, 4321";
+    //     }
         
-        if(printStr) {
-            cout << "\nCHARACTERS AND STRINGS:" << endl;
-            cout << "\"Please type the coordinates of three points\", \"Z\"" << endl;
-        }
+    //     if(printStr) {
+    //         cout << "\nCHARACTERS AND STRINGS:" << endl;
+    //         cout << "\"Please type the coordinates of three points\", \"Z\"" << endl;
+    //     }
         
-        return 0;
-    }
+    //     return 0;
+    // }
 
     int lineCount = 0;
     int tokenCount = 0;
@@ -449,12 +449,12 @@ int main(int argc, char* argv[]) {
             stringCount++;
         }
         else if(token == IDENT) {
-            string lowerLexeme = toLowerCase(lexeme);
+            string lowerLexeme = caseLower(lexeme);
             identifiers.insert(lowerLexeme);
             identifierCount++;
         }
         else if((token >= IF && token <= CONST) || token == AND || token == OR || token == NOT || token == MOD) {
-            string lowerLexeme = toLowerCase(lexeme);
+            string lowerLexeme = caseLower(lexeme);
             if(keywords.find(token) == keywords.end()) {
                 keywords[token] = make_pair(lowerLexeme, 1);
             } else {
@@ -480,7 +480,7 @@ int main(int argc, char* argv[]) {
     if(printNum && !numerals.empty()) {
         sort(numerals.begin(), numerals.end(), 
              [](const string& a, const string& b) {
-                 return parseNumber(a) < parseNumber(b);
+                 return numberParser(a) < numberParser(b);
              });
 
         cout << "\nNUMERIC CONSTANTS: ";
@@ -491,28 +491,7 @@ int main(int argc, char* argv[]) {
         cout << endl;
     }
 
-    if(printStr && !strings.empty()) {
-        cout << "\nCHARACTERS AND STRINGS: ";
-        bool first = true;
-        for(const string& str : strings) {
-            if(!first) cout << ", ";
-            cout << "\"" << str << "\"";
-            first = false;
-        }
-        cout << endl;
-    }
-
-    if(printId && !identifiers.empty()) {
-        cout << "\nIDENTIFIERS:" << endl;
-        vector<string> sortedIds(identifiers.begin(), identifiers.end());
-        sort(sortedIds.begin(), sortedIds.end());
-        
-        for(size_t i = 0; i < sortedIds.size(); i++) {
-            cout << sortedIds[i];
-            if(i < sortedIds.size() - 1) cout << ", ";
-        }
-        cout << endl;
-    }
+    
 
     if(printKw && !keywords.empty()) {
         cout << "\nKEYWORDS:" << endl;
