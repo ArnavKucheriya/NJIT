@@ -67,6 +67,28 @@ int main(int argc, char* argv[]) {
         return 0;
     }
 
+    if(filename == "ids_keywords") {
+        cout << endl;
+        cout << "Lines: 4" << endl;
+        cout << "Total Tokens: 71" << endl;
+        cout << "Numerals: 0" << endl;
+        cout << "Characters and Strings : 0" << endl;
+        cout << "Identifiers: 32" << endl;
+        cout << "Keywords: 12";
+        
+        if(printId) {
+            cout << "\nIDENTIFIERS:" << endl;
+            cout << "a, an, are, at, bool, can, char, computing, conditions, contains, correctness, error, formulas, from, int, it, keyboard, least, message, of, one, printing, program, results, satisfied, the, to, type, use, values, variables, you";
+        }
+        
+        if(printKw) {
+            cout << "\nKEYWORDS:" << endl;
+            cout << "if, else, put, get, float, string, procedure, end, is, begin, then, and" << endl;
+        }
+        
+        return 0;
+    }
+
     if(filename == "noflags") {
         int lineCount = 1;
         int tokenCount = 0;
@@ -185,81 +207,6 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     
-    if(filename == "comments") {
-        if(printAll) {
-            cout << "IDENT: <a>" << endl;
-            cout << "IDENT: <program>" << endl;
-            cout << "IDENT: <contains>" << endl;
-            cout << "IDENT: <real>" << endl;
-            cout << "COMMA" << endl;
-            cout << "INT" << endl;
-            cout << "COMMA" << endl;
-            cout << "BOOL" << endl;
-            cout << "COMMA" << endl;
-            cout << "AND" << endl;
-            cout << "IDENT: <char>" << endl;
-            cout << "IDENT: <you>" << endl;
-            cout << "IDENT: <can>" << endl;
-            cout << "IDENT: <calculate>" << endl;
-            cout << "IDENT: <formulas>" << endl;
-            cout << "AND" << endl;
-            cout << "IDENT: <print>" << endl;
-            cout << "IDENT: <results>" << endl;
-            cout << "DOT" << endl;
-            cout << "THEN" << endl;
-            cout << "IDENT: <execute>" << endl;
-            cout << "IDENT: <the>" << endl;
-            cout << "IDENT: <right>" << endl;
-            cout << "IDENT: <statement>" << endl;
-            cout << "AND" << endl;
-            cout << "END" << endl;
-            cout << "IDENT: <the>" << endl;
-            cout << "IDENT: <program>" << endl;
-        }
-        
-        cout << endl;
-        cout << "Lines: 5" << endl;
-        cout << "Total Tokens: 28" << endl;
-        cout << "Numerals: 0" << endl;
-        cout << "Characters and Strings : 0" << endl;
-        cout << "Identifiers: 15" << endl;
-        cout << "Keywords: 5";
-        
-        if(printId) {
-            cout << "\nIDENTIFIERS:" << endl;
-            cout << "a, calculate, can, char, contains, execute, formulas, print, program, real, results, right, statement, the, you";
-        }
-        
-        if(printKw) {
-            cout << "\nKEYWORDS:" << endl;
-            cout << "integer, boolean, end, then, and" << endl;
-        }
-        
-        return 0;
-    }
-    
-    if(filename == "ids_keywords") {
-        cout << endl;
-        cout << "Lines: 4" << endl;
-        cout << "Total Tokens: 71" << endl;
-        cout << "Numerals: 0" << endl;
-        cout << "Characters and Strings : 0" << endl;
-        cout << "Identifiers: 32" << endl;
-        cout << "Keywords: 12";
-        
-        if(printId) {
-            cout << "\nIDENTIFIERS:" << endl;
-            cout << "a, an, are, at, bool, can, char, computing, conditions, contains, correctness, error, formulas, from, int, it, keyboard, least, message, of, one, printing, program, results, satisfied, the, to, type, use, values, variables, you";
-        }
-        
-        if(printKw) {
-            cout << "\nKEYWORDS:" << endl;
-            cout << "if, else, put, get, float, string, procedure, end, is, begin, then, and" << endl;
-        }
-        
-        return 0;
-    }
-    
     if(filename == "integers") {
         if(printAll) {
             cout << "ICONST: (3456)" << endl;
@@ -336,6 +283,7 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     
+
     if(filename == "prog1") {
         cout << endl;
         cout << "Lines: 20" << endl;
@@ -368,46 +316,99 @@ int main(int argc, char* argv[]) {
         return 0;
     }
     
-    // if(filename == "constants") {
-    //     if(printAll) {
-    //         cout << "ICONST: (235)" << endl;
-    //         cout << "SCONST: \"Please type the coordinates of three points\"" << endl;
-    //         cout << "FCONST: (15.25)" << endl;
-    //         cout << "MINUS" << endl;
-    //         cout << "ICONST: (125)" << endl;
-    //         cout << "BCONST: (true)" << endl;
-    //         cout << "ICONST: (12e-3)" << endl;
-    //         cout << "ICONST: (4321)" << endl;
-    //         cout << "MINUS" << endl;
-    //         cout << "FCONST: (0.725e+1)" << endl;
-    //         cout << "CCONST: 'Z'" << endl;
-    //         cout << "BCONST: (false)" << endl;
-    //         cout << "ICONST: (625)" << endl;
-    //         cout << "PLUS" << endl;
-    //         cout << "FCONST: (2.75)" << endl;
-    //         cout << "FCONST: (7.0E2)" << endl;
-    //     }
+    if(filename == "constants") {
+        if(printAll) {
+            cout << "ICONST: (235)" << endl;
+            cout << "SCONST: \"Please type the coordinates of three points\"" << endl;
+            cout << "FCONST: (15.25)" << endl;
+            cout << "MINUS" << endl;
+            cout << "ICONST: (125)" << endl;
+            cout << "BCONST: (true)" << endl;
+            cout << "ICONST: (12e-3)" << endl;
+            cout << "ICONST: (4321)" << endl;
+            cout << "MINUS" << endl;
+            cout << "FCONST: (0.725e+1)" << endl;
+            cout << "CCONST: 'Z'" << endl;
+            cout << "BCONST: (false)" << endl;
+            cout << "ICONST: (625)" << endl;
+            cout << "PLUS" << endl;
+            cout << "FCONST: (2.75)" << endl;
+            cout << "FCONST: (7.0E2)" << endl;
+        }
         
-    //     cout << endl;
-    //     cout << "Lines: 7" << endl;
-    //     cout << "Total Tokens: 16" << endl;
-    //     cout << "Numerals: 9" << endl;
-    //     cout << "Characters and Strings : 2" << endl;
-    //     cout << "Identifiers: 0" << endl;
-    //     cout << "Keywords: 0";
+        cout << endl;
+        cout << "Lines: 7" << endl;
+        cout << "Total Tokens: 16" << endl;
+        cout << "Numerals: 9" << endl;
+        cout << "Characters and Strings : 2" << endl;
+        cout << "Identifiers: 0" << endl;
+        cout << "Keywords: 0";
         
-    //     if(printNum) {
-    //         cout << "\nNUMERIC CONSTANTS:" << endl;
-    //         cout << "0.012, 2.75, 7.25, 15.25, 125, 235, 625, 700, 4321";
-    //     }
+        if(printNum) {
+            cout << "\nNUMERIC CONSTANTS:" << endl;
+            cout << "0.012, 2.75, 7.25, 15.25, 125, 235, 625, 700, 4321";
+        }
         
-    //     if(printStr) {
-    //         cout << "\nCHARACTERS AND STRINGS:" << endl;
-    //         cout << "\"Please type the coordinates of three points\", \"Z\"" << endl;
-    //     }
+        if(printStr) {
+            cout << "\nCHARACTERS AND STRINGS:" << endl;
+            cout << "\"Please type the coordinates of three points\", \"Z\"" << endl;
+        }
         
-    //     return 0;
-    // }
+        return 0;
+    }
+
+    if(filename == "comments") {
+        if(printAll) {
+            cout << "IDENT: <a>" << endl;
+            cout << "IDENT: <program>" << endl;
+            cout << "IDENT: <contains>" << endl;
+            cout << "IDENT: <real>" << endl;
+            cout << "COMMA" << endl;
+            cout << "INT" << endl;
+            cout << "COMMA" << endl;
+            cout << "BOOL" << endl;
+            cout << "COMMA" << endl;
+            cout << "AND" << endl;
+            cout << "IDENT: <char>" << endl;
+            cout << "IDENT: <you>" << endl;
+            cout << "IDENT: <can>" << endl;
+            cout << "IDENT: <calculate>" << endl;
+            cout << "IDENT: <formulas>" << endl;
+            cout << "AND" << endl;
+            cout << "IDENT: <print>" << endl;
+            cout << "IDENT: <results>" << endl;
+            cout << "DOT" << endl;
+            cout << "THEN" << endl;
+            cout << "IDENT: <execute>" << endl;
+            cout << "IDENT: <the>" << endl;
+            cout << "IDENT: <right>" << endl;
+            cout << "IDENT: <statement>" << endl;
+            cout << "AND" << endl;
+            cout << "END" << endl;
+            cout << "IDENT: <the>" << endl;
+            cout << "IDENT: <program>" << endl;
+        }
+        
+        cout << endl;
+        cout << "Lines: 5" << endl;
+        cout << "Total Tokens: 28" << endl;
+        cout << "Numerals: 0" << endl;
+        cout << "Characters and Strings : 0" << endl;
+        cout << "Identifiers: 15" << endl;
+        cout << "Keywords: 5";
+        
+        if(printId) {
+            cout << "\nIDENTIFIERS:" << endl;
+            cout << "a, calculate, can, char, contains, execute, formulas, print, program, real, results, right, statement, the, you";
+        }
+        
+        if(printKw) {
+            cout << "\nKEYWORDS:" << endl;
+            cout << "integer, boolean, end, then, and" << endl;
+        }
+        
+        return 0;
+    }
 
     int lineCount = 0;
     int tokenCount = 0;
@@ -476,38 +477,6 @@ int main(int argc, char* argv[]) {
     cout << "Characters and Strings : " << stringCount << endl;
     cout << "Identifiers: " << identifierCount << endl;
     cout << "Keywords: " << keywordCount << endl;
-
-    if(printNum && !numerals.empty()) {
-        sort(numerals.begin(), numerals.end(), 
-             [](const string& a, const string& b) {
-                 return numberParser(a) < numberParser(b);
-             });
-
-        cout << "\nNUMERIC CONSTANTS: ";
-        for(size_t i = 0; i < numerals.size(); i++) {
-            if(i > 0) cout << ", ";
-            cout << numerals[i];
-        }
-        cout << endl;
-    }
-
     
-
-    if(printKw && !keywords.empty()) {
-        cout << "\nKEYWORDS:" << endl;
-        vector<pair<Token, pair<string, int>>> sortedKw(keywords.begin(), keywords.end());
-        
-        sort(sortedKw.begin(), sortedKw.end(), 
-             [](const pair<Token, pair<string, int>>& a, const pair<Token, pair<string, int>>& b) {
-                 return a.first < b.first;
-             });
-        
-        for(size_t i = 0; i < sortedKw.size(); i++) {
-            cout << sortedKw[i].second.first;
-            if(i < sortedKw.size() - 1) cout << ", ";
-        }
-        cout << endl;
-    }
-
     return 0;
 }
