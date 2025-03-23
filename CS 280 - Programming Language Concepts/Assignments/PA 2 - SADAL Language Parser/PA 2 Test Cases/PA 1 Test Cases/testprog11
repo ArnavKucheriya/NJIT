@@ -1,0 +1,14 @@
+procedure prog11 is
+	-- { Testing Missing Begin keyword for procedure body } 
+	
+	x, y_1, w234: integer;	
+	str : string := "Welcome";
+	z : float;
+	flag , bing : boolean:= false ; 
+	
+
+	get(x);
+	put("Value of x= "); put(x);
+	put("Value of z= ");
+	putline(z);
+END prog1;

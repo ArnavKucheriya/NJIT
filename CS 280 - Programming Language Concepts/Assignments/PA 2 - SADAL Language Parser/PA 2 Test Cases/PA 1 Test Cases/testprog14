@@ -1,0 +1,21 @@
+procedure prog14 is
+	-- { Illegal relational expression} 
+	
+	x, y_1, w234: integer;	
+	str : constant string := "Welcome";
+	z : float;
+	flag , bing : boolean:= false ; 
+	ch : character;
+	
+Begin
+	get(x);
+	put("Value of x= "); put(x);
+	z := x * w234;
+	ch := str(3);
+	if (z >= y_1 = 0) then
+	  	z := z + Y_1;
+	  	x := x -1;
+	end if;
+	put("Value of z= ");
+	putline(z);
+END prog1;
