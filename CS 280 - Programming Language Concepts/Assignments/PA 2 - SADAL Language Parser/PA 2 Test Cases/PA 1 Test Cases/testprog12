@@ -1,0 +1,14 @@
+procedure prog12 is
+	-- { Testing Missing colon in declaration statement} 
+	
+	x, y_1, w234: integer;	
+	str  string := "Welcome";
+	z : float;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	get(x);
+	put("Value of x= "); put(x);
+	put"Value of z= ");
+	putline(z);
+END prog1;

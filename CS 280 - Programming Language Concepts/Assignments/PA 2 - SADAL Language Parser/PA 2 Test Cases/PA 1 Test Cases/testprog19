@@ -1,0 +1,30 @@
+procedure prog19 is
+	-- { Testing nested If-Then-Else} 
+	
+	n, y_1, m234: integer;	
+	msg : constant string := "Welcome";
+	z : float;
+	flagship , bingbong : boolean:= false ; 
+	karacter : character;
+	
+Begin
+	get(n);
+	put("Value of n= "); put(n);
+	z := n * m234;
+	karacter := msg(3);
+	if (z > 5 ) then
+	  	z := z + Y_1;
+	  	n := n + 1;
+	elsif (z < 4) then
+	if ( z > 2) then
+		z := z - Y_1;
+	  	n := n - 1;
+	else 
+		z :=  Y_1;
+	end if;
+	else
+		z := -1;
+	end if;
+	put("Value of z= ");
+	putline(z);
+END prog1;

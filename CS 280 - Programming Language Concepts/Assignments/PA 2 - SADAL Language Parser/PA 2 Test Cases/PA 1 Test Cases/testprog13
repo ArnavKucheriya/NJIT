@@ -1,0 +1,15 @@
+procedure prog13 is
+	-- { Missing operator} 
+	
+	x, y_1, w234: integer;	
+	str : string := "Welcome";
+	z : float;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	get(x);
+	put("Value of x= "); put(x);
+	z := x  w234;
+	put"Value of z= ");
+	putline(z);
+END prog1;

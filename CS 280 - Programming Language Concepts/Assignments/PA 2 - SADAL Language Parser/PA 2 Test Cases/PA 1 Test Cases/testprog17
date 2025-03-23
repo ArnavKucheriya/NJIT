@@ -1,0 +1,20 @@
+procedure prog17 is
+	-- { Testing syntax of range definition in a substring operation } 
+	
+	x, y_1, w123: integer := 2;	
+	str1 : string := "Welcome";
+	str2 : string (7);
+	z : float := 0.0;
+	flag , bing : boolean:= false ; 
+	ch : character;
+	
+Begin
+	put("Value of x= "); put(x);
+	str2 := str1(z+2..w123*3);
+	if (z >= y_1 ) then
+	  	z := z + Y_1;
+	  	x := x -1;
+	end if;
+	put("Value of z= ");
+	putline(z);
+END prog1;

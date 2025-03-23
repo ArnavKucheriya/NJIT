@@ -1,0 +1,14 @@
+procedure prog5 is
+	-- { Missing semicolon } 
+	
+	x, y_1, w234: integer;	
+	str : string := "Welcome";
+	z : float;
+	flag, bing : boolean:= false ; 
+	
+begin
+	get(x);
+	put("Value of x= "); put(x)
+	put("Value of z= ");
+	putln(z);
+END prog1;

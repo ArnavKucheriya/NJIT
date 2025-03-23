@@ -1,0 +1,30 @@
+procedure prog18 is
+	-- { Testing Elsif selection }
+	
+	x, y_1, w234: integer;	
+	str : constant string := "Welcome";
+	v : float;
+	flag , long : boolean:= false ; 
+	char : character;
+	
+Begin
+	get(x);
+	put("Value of x= "); put(x);
+	v := x * w234;
+	char := str(3);
+	if (v >= 5 ) then
+	  	v := v + Y_1;
+	  	x := x + 1;
+	elsif ( v > 2) then
+		v := v - Y_1;
+	  	x := x - 1;
+	elsif ( v >= 0) then
+		if(x=0) then v := Y_1;
+		end if;
+	  	
+	else
+		Y_1 := -1;
+	end if;
+	put("Value of v= ");
+	putline(v);
+END prog1;
