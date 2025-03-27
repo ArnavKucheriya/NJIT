@@ -96,7 +96,7 @@ A series of visualizations were created to uncover key patterns and relationship
 
 ### 4.1 Distribution of Hotspots by Borough
 
-![[image.png]]
+![alt text](image.png)
 
 > This bar chart shows that Manhattan and Brooklyn host the majority of public Wi-Fi hotspots. This aligns with population density and business infrastructure in those boroughs.
 
@@ -108,7 +108,7 @@ sns.countplot(data=wifi_df, x='Borough_Name')
 
 ### 4.2 Wi-Fi Type Distribution
 
-![[image 1.png]]
+![alt text](<image 1.png>)
 
 > The dataset reveals a heavy skew toward Free Wi-Fi, indicating a strong initiative to promote accessible internet in public spaces across NYC.
 
@@ -120,7 +120,7 @@ sns.countplot(data=wifi_df, x='WiFi_Type')
 
 ### 4.3 Correlation of Features with Latitude
 
-![[image 2.png]]
+![alt text](<image 2.png>)
 
 > This heatmap reveals how encoded features correlate with latitude. Boroughs like Queens and providers in northern NYC show higher positive correlation, validating the idea that categorical features can partially explain geographic distribution.
 
@@ -134,7 +134,7 @@ sns.heatmap(corr_matrix[['Latitude']].sort_values(by='Latitude', ascending=False
 
 ### 4.4 Latitude Distribution by Borough
 
-![[image 3.png]]
+![alt text](<image 3.png>)
 
 > A boxplot of Latitude by Borough shows that Queens and the Bronx generally host more northern hotspots (higher latitude), while Staten Island and downtown Manhattan are located further south.
 
