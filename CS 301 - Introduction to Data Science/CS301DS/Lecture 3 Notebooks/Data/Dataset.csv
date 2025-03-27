@@ -1,0 +1,11 @@
+State,Salary,Age,Paid_back
+New York,80000,35,Yes
+New Jersey,60000,47,Yes
+Pennsylvania,50000,61,No
+New Jersey,,29,No
+New Jersey,90000,70,No
+New York,40000,37,Yes
+Pennsylvania,56000,30,Yes
+New York,85000,,No
+Pennsylvania,42000,50,Yes
+New Jersey,72000,42,Yes
