@@ -144,7 +144,7 @@ sns.boxplot(data=wifi_df, x='Borough_Name', y='Latitude')
 
 ### 4.5 Scatter Plot: Wi-Fi Hotspot Locations in NYC
 
-![[Pasted image 20250331172705.png]]
+![alt text](image-5.png)
 
 > This scatter plot shows the geographic distribution of Wi-Fi hotspots across New York City, with longitude plotted on the x-axis and latitude on the y-axis.
 
