@@ -142,6 +142,27 @@ sns.heatmap(corr_matrix[['Latitude']].sort_values(by='Latitude', ascending=False
 sns.boxplot(data=wifi_df, x='Borough_Name', y='Latitude')
 ```
 
+### 4.5 Scatter Plot: Wi-Fi Hotspot Locations in NYC
+
+![alt text](image-1.png)
+
+> This scatter plot shows the geographic distribution of Wi-Fi hotspots across New York City, with longitude plotted on the x-axis and latitude on the y-axis.
+
+```python
+# Import required library
+import matplotlib.pyplot as plt
+
+# Scatter plot for Latitude vs. Longitude
+plt.figure(figsize=(8, 6))
+plt.scatter(wifi_df['Longitude'], wifi_df['Latitude'], c='blue', alpha=0.5, label='Hotspot Locations')
+plt.title('Scatter Plot of Wi-Fi Hotspot Locations in NYC')
+plt.xlabel('Longitude')
+plt.ylabel('Latitude')
+plt.legend()
+plt.grid(True)
+plt.show()
+```
+
 ---
 
 <div style="page-break-after: always;"></div>
