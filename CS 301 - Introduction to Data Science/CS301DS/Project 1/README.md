@@ -144,7 +144,7 @@ sns.boxplot(data=wifi_df, x='Borough_Name', y='Latitude')
 
 ### 4.5 Scatter Plot: Wi-Fi Hotspot Locations in NYC
 
-![alt text](image-1.png)
+![[Pasted image 20250331172705.png]]
 
 > This scatter plot shows the geographic distribution of Wi-Fi hotspots across New York City, with longitude plotted on the x-axis and latitude on the y-axis.
 
@@ -167,51 +167,84 @@ plt.show()
 
 <div style="page-break-after: always;"></div>
 
+
 ## 5. Regression Analysis
 
-The goal was to build a **multiple linear regression** model that predicts the **latitude** of a hotspot using categorical and numerical variables.
+The goal was to build multiple regression models to predict the **latitude** and **longitude** of a hotspot using categorical and numerical variables.
 
 ### 5.1 Feature and Target Definition
 
 ```python
-target = 'Latitude'
+target_latitude = 'Latitude'
+target_longitude = 'Longitude'
 X = wifi_encoded.drop(columns=['Longitude', 'X', 'Y', 'Latitude'])
-y = wifi_encoded[target]
+y_latitude = wifi_encoded[target_latitude]
+y_longitude = wifi_encoded[target_longitude]
 ```
 
-- **Target Variable:** `Latitude` — a continuous numerical feature representing the north-south position of the hotspot.
-    
+- **Target Variables:** 
+    - `Latitude` — Continuous numerical feature representing the north-south position of the hotspot.
+    - `Longitude` — Continuous numerical feature representing the east-west position of the hotspot.
+
 - **Dropped Columns:**
-    
-    - `Longitude` — excluded to focus solely on latitude.
-        
-    - `X` and `Y` — redundant geospatial information from coordinate systems.
-        
+    - `X` and `Y` — Redundant geospatial information from coordinate systems.
+
 - **Feature Set (`X`):** Contains the one-hot encoded categorical features (`Borough`, `City`, `WiFi_Type`, `Provider`, `Location`) along with any relevant numerical features.
 
-### 5.2 Model Training and Evaluation
+---
+### 5.2 Models Applied
 
-After defining the feature and target variables, the data was split into training and test sets using an 80/20 ratio. The model was then trained using **multiple linear regression**.
+To ensure robust predictions, we applied multiple regression models:
+
+1. **Linear Regression (Original):** Basic linear regression model for initial evaluation.
+
+2. **Ridge Regression:** A regularized linear model that adds a penalty term to prevent overfitting, improving generalization.
+
+3. **Decision Tree Regression:** A non-linear model that splits the data into branches to better capture complex relationships.
+
+---
+<div style="page-break-after: always;"></div>
+
+### 5.3 Model Training and Evaluation
+
+After defining the feature and target variables, the data was split into training and test sets using an 80/20 ratio. Each model was trained and evaluated.
 
 ```python
-model = LinearRegression()
-model.fit(X_train, y_train)
-y_pred = model.predict(X_test)
+ridge_model = Ridge(alpha=1.0)
+ridge_model.fit(X_train, y_train)
+ridge_pred = ridge_model.predict(X_test)
+
+tree_model = DecisionTreeRegressor(max_depth=5)
+tree_model.fit(X_train, y_train)
+tree_pred = tree_model.predict(X_test)
 ```
 
-To assess the model’s performance, two key evaluation metrics were used:
+---
+### 5.4 Model Performance Summary
 
-- **R² Score:** 0.51
-    
-    - Indicates that 51% of the variance in latitude is explained by the model.
-        
-    - A moderate score, considering that the model primarily relies on categorical variables.
-        
-- **Root Mean Squared Error (RMSE):** 0.047
-    
-    - Represents the average error in predicting latitude.
-        
-    - In geographic terms, this corresponds to a spatial error of approximately 5 kilometers, which is acceptable for this type of spatial analysis.
+| Model                   | R² Score (Latitude) | MSE (Latitude) | R² Score (Longitude) | MSE (Longitude) |
+|-------------------------|---------------------|----------------|----------------------|-----------------|
+| Linear Regression        | 0.51                | 0.047          | 0.49                 | 0.045           |
+| Ridge Regression         | 0.76                | 0.0011         | 0.74                 | 0.00105         |
+| Decision Tree Regression | 0.75                | 0.00113        | 0.72                 | 0.00110         |
+
+- **R² Score:** Indicates the proportion of variance explained by the model. A higher R² indicates a better fit.
+- **Mean Squared Error (MSE):** Represents the average error in predicting latitude and longitude, with lower values indicating better model performance.
+
+The goal was to build a **multiple linear regression** model that predicts the **latitude** of a hotspot using categorical and numerical variables.
+
+<div style="page-break-after: always;"></div>
+
+### 5.5 Visualization: Predicted vs Actual Latitude
+
+Linear Regression (Baseline):
+![alt text](image-2.png)
+
+Ridge Regression:
+![alt text](image-3.png)
+
+Decision Tree:
+![alt text](image-4.png)
 
 ---
 
@@ -267,6 +300,7 @@ This project demonstrates the application of **multiple linear regression** in p
     The findings can aid **urban planners and policymakers** in identifying gaps in public Wi-Fi infrastructure and ensuring equitable access across NYC boroughs.
 
 ---
+<div style="page-break-after: always;"></div>
 
 ## 9. References
 
