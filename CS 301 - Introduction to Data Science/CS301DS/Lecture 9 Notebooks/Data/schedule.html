@@ -1,0 +1,1802 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>NJIT: Course Schedule</title>
+
+    <meta charset="utf-8"/>
+    <meta name="dir" content="ltr"/>
+    <meta name="synchronizerToken" content="41af1976-9aae-4882-bd51-438b4c786c35"/>
+
+    <meta name="logLevel" content="ERROR"/>
+    <meta name="maxInactiveInterval" content="1800"/>
+    <meta name="transactionTimeout" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <link rel="apple-touch-icon" href="images/applicationIcon.png"/>
+    <link rel="apple-touch-startup-image" href="images/applicationStartup.png">
+    <meta name="keepAliveURL" content="/BannerExtensibility/keepAlive/data"/>
+    <meta name="ssbMepDesc" content=""/>
+    <meta name="fullName" content=""/>
+    <meta name="loginEndpoint" content="https://generalssb-prod.ec.njit.edu/BannerExtensibility/customPage/page/pbadm.ssoauth?url=/"/>
+    <meta name="logoutEndpoint" content="saml/logout?local=true"/>
+    <meta name="guestLoginEnabled" content="false"/>
+    <meta name="userLocale" content="en_US"/>
+    <meta name="footerFadeAwayTime" content="10000"/>
+    <meta name="hideSSBHeaderComps" content="false">
+    <meta name="openSSBInExperience" content="false">
+    <meta name="menuEndPoint" content="/BannerExtensibility/ssb/menu"/>
+    <meta name="menuBaseURL" content="/BannerExtensibility/ssb"/>
+
+    <meta name="aboutUrl" content=""/>
+    <meta name="aboutUrlContextPath" content="/BannerExtensibility/ssb"/>
+    <meta name="contextPath" content="/BannerExtensibility"/>
+    <meta name="headerAttributes" content=""/>
+    <meta name="privacyPolicyUrl" content=""/>
+    <meta name="requestContext" content="/BannerExtensibility"/>
+    <meta name="isUsageTrackingEnabled" content=""/>
+    <meta name="usageTrackingURL" content="/BannerExtensibility/ssb/userPreference/fetchUsageTracking"/>
+    <meta name="isLanguageSettingRequired" content="true"/>
+    <meta name="switchTojqueryLegacy" content="false"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/BannerExtensibility/assets/eds/apple-touch-icon-57x57.png"/>
+    <link rel="apple-touch-icon" sizes="60x60" href="/BannerExtensibility/assets/eds/apple-touch-icon-60x60.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/BannerExtensibility/assets/eds/apple-touch-icon-72x72.png"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="/BannerExtensibility/assets/eds/apple-touch-icon-76x76.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/BannerExtensibility/assets/eds/apple-touch-icon-114x114.png"/>
+    <link rel="apple-touch-icon" sizes="120x120" href="/BannerExtensibility/assets/eds/apple-touch-icon-120x120.png"/>
+    <link rel="apple-touch-icon" sizes="144x144" href="/BannerExtensibility/assets/eds/apple-touch-icon-144x144.png"/>
+    <link rel="apple-touch-icon" sizes="152x152" href="/BannerExtensibility/assets/eds/apple-touch-icon-152x152.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/BannerExtensibility/assets/eds/apple-touch-icon-180x180.png"/>
+    <link rel="shortcut icon" type="image/png" sizes="32x32" href="/BannerExtensibility/assets/eds/favicon-32x32.png"/>
+    <link rel="shortcut icon" type="image/png" sizes="192x192" href="/BannerExtensibility/assets/eds/android-chrome-192x192.png"/>
+    <link rel="shortcut icon" type="image/png" sizes="96x96" href="/BannerExtensibility/assets/eds/favicon-96x96.png"/>
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="/BannerExtensibility/assets/eds/favicon-16x16.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/BannerExtensibility/assets/eds/favicon.ico"/>
+
+    <link rel="stylesheet" href="/BannerExtensibility/assets/modules/pageBuilderLTR-mf.css"/>
+
+    <script type="text/javascript" src="/BannerExtensibility/assets/modules/pageBuilderJQuery-370-mf.js"></script>
+
+    <script type="text/javascript" src="/BannerExtensibility/assets/modules/pageBuilderJQuery-mf.js"></script>
+
+    <script type="text/javascript">
+
+    var rootWebApp = "\u002fBannerExtensibility\u002f";
+    var resourceBase = "\u002fBannerExtensibility\u002finternalPb\u002f";
+    var templatesLocation = "\u002fBannerExtensibility\u002fassets\u002ftemplate";
+    var user = {
+        "authenticated": false,
+        "loginName": "__grails.anonymous.user__",
+        "fullName": "Anonymous",
+        "oracleUserName": "",
+        "isSuperUser": false
+    };
+    var gridLocale = 'en-us';
+    var params = {
+        "controller": "customPage",
+        "action": "page",
+        "id": "stuRegCrseSched"
+    };
+    if (!window.console) {
+        console = {
+            log: function() {}
+        };
+    }
+    // inject services and controller modules to be registered with the global ng-app
+    var myCustomServices = ['ngResource', 'ui.grid', 'ui.grid.i18n', 'ui.grid.edit', 'ui.grid.selection', 'ui.grid.resizeColumns', 'ui.grid.cellNav', 'ui', 'pbrun.directives', 'ngSanitize', 'xe-ui-components', 'ui.grid.autoResize'];
+    var pageControllers = {};
+
+    var transactionTimeoutMeta = $("meta[name=transactionTimeout]"),
+        transactionTimeoutSeconds = (transactionTimeoutMeta.length == 1 ? parseInt(transactionTimeoutMeta.attr("content")) : 30),
+        transactionTimeoutPadding = 10 * 1000,
+        transactionTimeoutMilli = (transactionTimeoutSeconds * 1000) + transactionTimeoutPadding;
+
+    $.ajaxSetup({
+        timeout: transactionTimeoutMilli
+    });
+
+    document.getElementsByName('headerAttributes')[0].content = JSON.stringify({
+        "pageTitle": "NJIT: Course Schedule"
+    });
+
+    var dateTimeLocale = "en-US";
+    </script>
+
+    <!-- sitemesh -->
+    <meta name="layout" content="bannerSelfServicePBPage"/>
+    <!-- import custom stylesheets -->
+    <link type="text/css" rel="stylesheet" href="/BannerExtensibility/cssRender?name=pbDefault"/>
+    <link type="text/css" rel="stylesheet" href="/BannerExtensibility/cssRender?name=stuRegCrseSched"/>
+
+    <!--meta name="layout" content="simple"/-->
+
+    <script type="text/javascript">
+    var pageId = "stuRegCrseSched";
+    var controllerId = "CustomPageController_stuRegCrseSched"
+    pageControllers[controllerId] =
+    function($scope, $locale, $q, $templateCache, pbDataSet, pbResource, pbAddCommon, uiGridConstants) {
+        $scope._controllerId = controllerId;
+        $scope._user = user;
+        $scope._params = params;
+        $scope._contextRoot = rootWebApp;
+        $scope._now = new Date();
+        // page specific code
+        $scope.stuRegCrseSchedDefaultTerm = pbResource('virtualDomains.stuRegCrseSchedDefaultTerm');
+
+        $scope.stuRegCrseSchedDefaultTermDataDS = pbDataSet($scope,
+        {
+            componentId: "stuRegCrseSchedDefaultTermData",
+            resource: $scope.stuRegCrseSchedDefaultTerm,
+            queryParams: '{}',
+            autoPopulate: true,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 1
+            ,
+            postQuery: function(data, response) {
+                //Set Error Count
+                $scope.errorCount = 0;
+
+                //Set Default Term
+                $scope.selectBlockTermSelect = $scope.stuRegCrseSchedDefaultTermData.DEFAULT_TERM;
+                $scope.selectBlockTermSelectDS.load();
+
+                //Set Page Default View
+                $scope.selectBlockPageViewSelect = "COURSE";
+                $scope.selectBlockPageViewSelectDS.load();
+            }
+        });
+
+        $scope.stuRegCrseSchedDefaultSubj = pbResource('virtualDomains.stuRegCrseSchedDefaultSubj');
+
+        $scope.stuRegCrseSchedDefaultSubjDataDS = pbDataSet($scope,
+        {
+            componentId: "stuRegCrseSchedDefaultSubjData",
+            resource: $scope.stuRegCrseSchedDefaultSubj,
+            queryParams: '{term : $scope.selectBlockTermSelect,attr : $scope.attr}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 5
+            ,
+            postQuery: function(data, response) {
+                //Set default subject
+                $scope.subj = $scope.stuRegCrseSchedDefaultSubjData.DEFAULT_SUBJECT;
+
+                //Let the Default subject load the rest of the tables INITIALLY
+                $scope.subjListTableDS.load();
+                $scope.courseListTableDS.load();
+                $scope.courseListSectionDetailDS.load();
+            }
+        });
+
+        $scope.stuRegCrseSchedDefaultUcid = pbResource('virtualDomains.stuRegCrseSchedDefaultUcid');
+
+        $scope.stuRegCrseSchedDefaultUcidDataDS = pbDataSet($scope,
+        {
+            componentId: "stuRegCrseSchedDefaultUcidData",
+            resource: $scope.stuRegCrseSchedDefaultUcid,
+            queryParams: '{term : $scope.selectBlockTermSelect}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 5
+            ,
+            postQuery: function(data, response) {
+                //Set default ucid
+                $scope.ucid = $scope.stuRegCrseSchedDefaultUcidData.DEFAULT_UCID;
+                $scope.selectBlockInstructorSearch = "";
+
+                //Let the Default UCID load the rest of the tables INITIALLY
+                $scope.instructorListTableDS.load();
+                $scope.instructorListSectionDetailDS.load();
+            }
+        });
+
+
+        $scope.selectBlockPageViewSelectDS = pbDataSet($scope,
+        {
+            componentId: "selectBlockPageViewSelect",
+            data: [{
+                "CODE": "COURSE",
+                "DESC": "Subject/Course"
+            }, {
+                "CODE": "INSTRUCTOR",
+                "DESC": "Instructor"
+            }],
+            queryParams: null,
+            autoPopulate: false,
+            selectValueKey: "CODE",
+            selectInitialValue: null
+
+            ,
+            onUpdate: function(item) {
+                //show spinner
+                $("#loader").css("display", "block");
+
+                //Reset Error Count
+                $scope.errorCount = 0;
+
+                if ($scope.selectBlockPageViewSelect == "COURSE") {
+
+                    //Hide Instructor View Blocks and reset variable
+                    $scope.selectBlockInstructorSearchBlock_visible = false;
+                    $scope.instructorListBlock_visible = false;
+                    $scope.instructorListSectionBlock_visible = false;
+                    $scope.ucid = "";
+
+                    //Load Course View Tables
+                    //$scope.subj = "";
+                    //Load the default subject and let it load the section blocks
+                    $scope.stuRegCrseSchedDefaultSubjDataDS.load();
+
+                    //Reload Attribute Select to reset it
+                    $scope.attr = "";
+                    $scope.selectBlockAttributeSelectDS.load();
+
+                    //$scope.subjListTableDS.load();
+                    //$scope.courseListTableDS.load();
+                    //$scope.courseListSectionDetailDS.load();
+
+                    //Show Course View Blocks
+                    $scope.selectBlockAttributeSelectBlock_visible = true;
+                    $scope.subjListBlock_visible = true;
+                    $scope.courseListBlock_visible = true;
+                    $scope.courseListSectionBlock_visible = true;
+
+                } else if ($scope.selectBlockPageViewSelect == "INSTRUCTOR") {
+
+                    //Hide Course View Blocks and reset variables
+                    $scope.selectBlockAttributeSelectBlock_visible = false;
+                    $scope.subjListBlock_visible = false;
+                    $scope.courseListBlock_visible = false;
+                    $scope.courseListSectionBlock_visible = false;
+
+                    $scope.subj = "";
+                    $scope.attr = "";
+
+                    //Load Instructor View Tables
+                    //$scope.ucid = "";
+                    //Load the default ucid and let it load the instructor blocks
+                    $scope.stuRegCrseSchedDefaultUcidDataDS.load();
+
+                    //$scope.selectBlockInstructorSearch  = "";
+                    //$scope.instructorListTableDS.load();
+                    //$scope.instructorListSectionDetailDS.load();
+
+                    //Show Instructor View Blocks     
+                    $scope.selectBlockInstructorSearchBlock_visible = true;
+                    $scope.instructorListBlock_visible = true;
+                    $scope.instructorListSectionBlock_visible = true;
+
+                }
+            }
+        });
+
+        $scope.stuRegCrseSchedTermSelect = pbResource('virtualDomains.stuRegCrseSchedTermSelect');
+
+        $scope.selectBlockTermSelectDS = pbDataSet($scope,
+        {
+            componentId: "selectBlockTermSelect",
+            resource: $scope.stuRegCrseSchedTermSelect,
+            queryParams: '{}',
+            autoPopulate: false,
+            selectValueKey: "TERM",
+            selectInitialValue: null
+
+            ,
+            onUpdate: function(item) {
+                //show spinner
+                $("#loader").css("display", "block");
+
+                //Reset Error Count
+                $scope.errorCount = 0;
+
+                if ($scope.selectBlockPageViewSelect == "COURSE") {
+
+                    //$scope.subj = "";
+                    //Load the default subject and let it load the section blocks
+                    $scope.stuRegCrseSchedDefaultSubjDataDS.load();
+
+                    $scope.attr = "";
+                    $scope.selectBlockAttributeSelectDS.load();
+
+
+
+
+
+                } else //$scope.subjListTableDS.load();
+                //$scope.courseListTableDS.load();
+                //$scope.courseListSectionDetailDS.load();
+                if ($scope.selectBlockPageViewSelect == "INSTRUCTOR") {
+
+                    //$scope.ucid = "";
+                    //Load the default UCID and let it load the section blocks
+                    $scope.stuRegCrseSchedDefaultUcidDataDS.load();
+
+
+
+
+                }
+            }
+            ,
+            //$scope.instructorListTableDS.load();
+            //$scope.instructorListSectionDetailDS.load();
+            postQuery: function(data, response) {
+                //show spinner
+                $("#loader").css("display", "block");
+
+                $scope.selectBlockTermSelect = $scope.stuRegCrseSchedDefaultTermData.DEFAULT_TERM;
+
+                $scope.stuRegCrseSchedDefaultSubjDataDS.load();
+                $scope.attr = "";
+                $scope.selectBlockAttributeSelectDS.load();
+
+
+
+
+
+            }
+        });
+        //Let the Default subject load the rest of the tables INITIALLY
+        //$scope.subjListTableDS.load();
+        //$scope.courseListTableDS.load();
+        //$scope.courseListSectionDetailDS.load();
+
+        $scope.stuRegCrseSchedSubjList = pbResource('virtualDomains.stuRegCrseSchedSubjList');
+
+        $scope.subjListTableDS = pbDataSet($scope,
+        {
+            componentId: "subjListTable",
+            resource: $scope.stuRegCrseSchedSubjList,
+            queryParams: '{term : $scope.selectBlockTermSelect,attr : $scope.attr}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 150
+            ,
+            postQuery: function(data, response) {
+                $scope.subjNum = 0;
+
+                //call function to ensure the table is loaded before attempting to highlight initial entry
+                subjInit();
+
+                function subjInit() {
+                    $scope.tdDivName = "pbid-subjListTable-td-subjListTableSubjectLink-0";
+                    $scope.initElement = document.getElementById($scope.tdDivName);
+
+                    if ($scope.initElement) {
+
+                        //element is loaded so add the class to highlight
+                        $scope.initElement.classList.add("td-selected");
+                    } else {
+
+                        //element not found so wait and call function again
+                        setTimeout(subjInit, 250);
+                    }
+                }
+            }
+        });
+
+        $scope.$watch('subjListTableDS.pagingOptions', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                if (newVal.currentPage && oldVal.currentPage) {
+                    $scope.subjListTableDS.load({
+                        all: false,
+                        paging: true
+                    });
+                }
+            }
+        }, true);
+        $scope.$watch('subjListTableDS.sortInfo', function(newVal, oldVal) {
+            if ((newVal.fields.join(',') !== oldVal.fields.join(',')) || (newVal.directions.join(',') !== oldVal.directions.join(','))) {
+                $scope.subjListTableDS.load({
+                    all: false,
+                    paging: true
+                });
+            }
+        }, true);
+        $scope.sortChanged = function(grid, sortColumns) {
+            if (sortColumns.length > 0 && sortColumns[0] && sortColumns[0].name) {
+                let fields = [];
+                let directions = [];
+                let count = 0;
+                sortColumns.forEach(function(it) {
+                    fields[count] = it.name;
+                    directions[count] = it.sort ? it.sort.direction : 'asc';
+                    count++;
+                });
+                grid.options.sortInfo.fields = fields;
+                grid.options.sortInfo.directions = directions;
+            }
+
+        }
+        $scope.$watch('subjListTableDS.selectedRecords[0]', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                $scope.subjListTableDS.setCurrentRecord(newVal);
+
+            }
+        });
+
+        $scope.stuRegCrseSchedCourseNumbs = pbResource('virtualDomains.stuRegCrseSchedCourseNumbs');
+
+        $scope.courseListTableDS = pbDataSet($scope,
+        {
+            componentId: "courseListTable",
+            resource: $scope.stuRegCrseSchedCourseNumbs,
+            queryParams: '{subject : $scope.subj,term : $scope.selectBlockTermSelect,attr : $scope.attr}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 100
+        });
+
+        $scope.$watch('courseListTableDS.pagingOptions', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                if (newVal.currentPage && oldVal.currentPage) {
+                    $scope.courseListTableDS.load({
+                        all: false,
+                        paging: true
+                    });
+                }
+            }
+        }, true);
+        $scope.$watch('courseListTableDS.sortInfo', function(newVal, oldVal) {
+            if ((newVal.fields.join(',') !== oldVal.fields.join(',')) || (newVal.directions.join(',') !== oldVal.directions.join(','))) {
+                $scope.courseListTableDS.load({
+                    all: false,
+                    paging: true
+                });
+            }
+        }, true);
+        $scope.sortChanged = function(grid, sortColumns) {
+            if (sortColumns.length > 0 && sortColumns[0] && sortColumns[0].name) {
+                let fields = [];
+                let directions = [];
+                let count = 0;
+                sortColumns.forEach(function(it) {
+                    fields[count] = it.name;
+                    directions[count] = it.sort ? it.sort.direction : 'asc';
+                    count++;
+                });
+                grid.options.sortInfo.fields = fields;
+                grid.options.sortInfo.directions = directions;
+            }
+
+        }
+        $scope.$watch('courseListTableDS.selectedRecords[0]', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                $scope.courseListTableDS.setCurrentRecord(newVal);
+
+            }
+        });
+
+        $scope.stuRegCrseSchedSections = pbResource('virtualDomains.stuRegCrseSchedSections');
+
+        $scope.courseListSectionDetailDS = pbDataSet($scope,
+        {
+            componentId: "courseListSectionDetail",
+            resource: $scope.stuRegCrseSchedSections,
+            queryParams: '{subject : $scope.subj,term : $scope.selectBlockTermSelect,attr : $scope.attr}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 9999
+            ,
+            postQuery: function(data, response) {
+                //Hide Spinner
+                $("#loader").css("display", "none");
+
+                //Reset Error Count
+                $scope.errorCount = 0;
+            }
+            ,
+            onError: function(response) {
+                $scope.errorCount = $scope.errorCount + 1;
+
+                if ($scope.errorCount < 3) {
+
+                    //wait 1 sec then try to reload
+                    setTimeout(function() {
+                        $scope.courseListSectionDetailDS.load();
+                    }, 1000);
+
+                } else {
+
+                    console.log("Error limit reached.");
+                    //Hide Spinner
+                    $("#loader").css("display", "none");
+                    alert("Error getting data. Please try again.", {
+                        type: "error"
+                    });
+                }
+            }
+        });
+
+        $scope.$watch('courseListSectionDetailDS.pagingOptions', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                if (newVal.currentPage && oldVal.currentPage) {
+                    $scope.courseListSectionDetailDS.load({
+                        all: false,
+                        paging: true
+                    });
+                }
+            }
+        }, true);
+        $scope.$watch('courseListSectionDetailDS.sortInfo', function(newVal, oldVal) {
+            if ((newVal.fields.join(',') !== oldVal.fields.join(',')) || (newVal.directions.join(',') !== oldVal.directions.join(','))) {
+                $scope.courseListSectionDetailDS.load({
+                    all: false,
+                    paging: true
+                });
+            }
+        }, true);
+        $scope.sortChanged = function(grid, sortColumns) {
+            if (sortColumns.length > 0 && sortColumns[0] && sortColumns[0].name) {
+                let fields = [];
+                let directions = [];
+                let count = 0;
+                sortColumns.forEach(function(it) {
+                    fields[count] = it.name;
+                    directions[count] = it.sort ? it.sort.direction : 'asc';
+                    count++;
+                });
+                grid.options.sortInfo.fields = fields;
+                grid.options.sortInfo.directions = directions;
+            }
+
+        }
+        $scope.$watch('courseListSectionDetailDS.selectedRecords[0]', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                $scope.courseListSectionDetailDS.setCurrentRecord(newVal);
+
+            }
+        });
+
+        $scope.stuRegCrseSchedSectionsExcel = pbResource('virtualDomains.stuRegCrseSchedSectionsExcel');
+
+        $scope.courseListSectionExcelDataDS = pbDataSet($scope,
+        {
+            componentId: "courseListSectionExcelData",
+            resource: $scope.stuRegCrseSchedSectionsExcel,
+            queryParams: '{subject : $scope.subj,prof_ucid : $scope.ucid,term : $scope.selectBlockTermSelect,attr : $scope.attr}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: -1
+            ,
+            postQuery: function(data, response) {
+                //Use the csvConfig to map field names from the domain that is connected to the named
+                //data element which should be of type Detail
+
+                var csvConfig = [
+                {
+                    "fieldName": "TERM",
+                    "header": "Term"
+                },
+                {
+                    "fieldName": "COURSE",
+                    "header": "Course"
+                },
+                {
+                    "fieldName": "TITLE",
+                    "header": "Title"
+                },
+                {
+                    "fieldName": "SECTION",
+                    "header": "Section"
+                },
+                {
+                    "fieldName": "CRN",
+                    "header": "CRN"
+                },
+                {
+                    "fieldName": "DAYS",
+                    "header": "Days"
+                },
+                {
+                    "fieldName": "TIMES",
+                    "header": "Times"
+                },
+                {
+                    "fieldName": "LOCATION",
+                    "header": "Location"
+                },
+                {
+                    "fieldName": "STATUS",
+                    "header": "Status"
+                },
+                {
+                    "fieldName": "MAX",
+                    "header": "Max"
+                },
+                {
+                    "fieldName": "NOW",
+                    "header": "Now"
+                },
+                {
+                    "fieldName": "INSTRUCTOR",
+                    "header": "Instructor"
+                },
+                {
+                    "fieldName": "INSTRUCTION_METHOD",
+                    "header": "Delivery Mode"
+                },
+                {
+                    "fieldName": "CREDITS",
+                    "header": "Credits"
+                },
+                {
+                    "fieldName": "INFO_LINK",
+                    "header": "Info"
+                },
+                {
+                    "fieldName": "COMMENTS",
+                    "header": "Comments"
+                }
+                ];
+
+                // Need to pull from separate data element because Grid will only list records on current page (ie 10 records).
+
+                var recs = $scope.courseListSectionExcelDataDS.data;
+
+                var currRowFields = [];
+
+                // Add Header Row to CSV
+                $.map(csvConfig, function(currRec, i) {
+                    currRowFields.push('"' + (currRec.header ? (currRec.header.replace('"', '""')) : '') + '"');
+                });
+
+                var csv = currRowFields.join(',') + '\n';
+                var currField;
+
+                // Add data rows to CSV
+                $.each(recs, function(i, currRow) {
+                    currRowFields = [];
+
+                    // Loop through fields
+                    $.map(csvConfig, function(currRec, i) {
+                        currField = currRow[currRec.fieldName];
+                        if (currField != undefined) {
+                            currRowFields.push('"' + currField.toString().replace('"', '""') + '"');
+                        } else {
+                            currRowFields.push('""');
+                        }
+                    });
+
+                    csv += currRowFields.join(',') + '\n';
+                });
+
+
+                var blob = new Blob([csv], {
+                    type: 'text/csv;charset=utf-8;'
+                });
+
+                //specify desired filename here
+                var dt = new Date();
+                var time = dt.getFullYear() + "" + dt.getMonth() + 1 + "" + dt.getDate() + "_" + dt.getHours() + "" + dt.getMinutes() + "" + dt.getSeconds();
+
+                var filename = 'Course_Schedule_' + $scope.selectBlockTermSelect + '_' + $scope.subj + '_' + time + '.csv';
+                if (navigator.msSaveOrOpenBlob) {
+                    navigator.msSaveOrOpenBlob(blob, filename);
+                } else {
+                    var link = document.createElement('a');
+                    var url = URL.createObjectURL(blob);
+                    link.setAttribute('href', url);
+                    link.setAttribute('download', filename);
+                    link.style.visibility = 'hidden';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+        });
+
+        $scope.stuRegCrseSchedInstructors = pbResource('virtualDomains.stuRegCrseSchedInstructors');
+
+        $scope.instructorListTableDS = pbDataSet($scope,
+        {
+            componentId: "instructorListTable",
+            resource: $scope.stuRegCrseSchedInstructors,
+            queryParams: '{term : $scope.selectBlockTermSelect}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 5000
+            ,
+            postQuery: function(data, response) {
+                $scope.ucidNum = 0;
+
+                //call function to ensure the table is loaded before attempting to highlight initial entry
+                instructorInit();
+
+                function instructorInit() {
+                    $scope.tdDivName = "pbid-instructorListTable-td-instructorListTableInstructorLink-0";
+                    $scope.initElement = document.getElementById($scope.tdDivName);
+
+                    if ($scope.initElement) {
+
+                        //element is loaded so add the class to highlight
+                        $scope.initElement.classList.add("td-selected");
+                    } else {
+
+                        //element not found so wait and call function again
+                        setTimeout(instructorInit, 250);
+                    }
+                }
+            }
+        });
+
+        $scope.$watch('instructorListTableDS.pagingOptions', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                if (newVal.currentPage && oldVal.currentPage) {
+                    $scope.instructorListTableDS.load({
+                        all: false,
+                        paging: true
+                    });
+                }
+            }
+        }, true);
+        $scope.$watch('instructorListTableDS.sortInfo', function(newVal, oldVal) {
+            if ((newVal.fields.join(',') !== oldVal.fields.join(',')) || (newVal.directions.join(',') !== oldVal.directions.join(','))) {
+                $scope.instructorListTableDS.load({
+                    all: false,
+                    paging: true
+                });
+            }
+        }, true);
+        $scope.sortChanged = function(grid, sortColumns) {
+            if (sortColumns.length > 0 && sortColumns[0] && sortColumns[0].name) {
+                let fields = [];
+                let directions = [];
+                let count = 0;
+                sortColumns.forEach(function(it) {
+                    fields[count] = it.name;
+                    directions[count] = it.sort ? it.sort.direction : 'asc';
+                    count++;
+                });
+                grid.options.sortInfo.fields = fields;
+                grid.options.sortInfo.directions = directions;
+            }
+
+        }
+        $scope.$watch('instructorListTableDS.selectedRecords[0]', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                $scope.instructorListTableDS.setCurrentRecord(newVal);
+
+            }
+        });
+
+        $scope.stuRegCrseSchedInstructorCourses = pbResource('virtualDomains.stuRegCrseSchedInstructorCourses');
+
+        $scope.instructorListSectionDetailDS = pbDataSet($scope,
+        {
+            componentId: "instructorListSectionDetail",
+            resource: $scope.stuRegCrseSchedInstructorCourses,
+            queryParams: '{prof_ucid : $scope.ucid,term : $scope.selectBlockTermSelect}',
+            autoPopulate: false,
+            selectValueKey: null,
+            selectInitialValue: null
+            ,
+            pageSize: 9999
+            ,
+            postQuery: function(data, response) {
+                //Hide Spinner
+                $("#loader").css("display", "none");
+
+                //Reset Error Count
+                $scope.errorCount = 0;
+            }
+            ,
+            onError: function(response) {
+                $scope.errorCount = $scope.errorCount + 1;
+
+                if ($scope.errorCount < 3) {
+
+                    //wait 1 sec then try to reload
+                    setTimeout(function() {
+                        $scope.instructorListSectionDetailDS.load();
+                    }, 1000);
+
+                } else {
+
+                    console.log("Error limit reached.");
+                    //Hide Spinner
+                    $("#loader").css("display", "none");
+                    alert("Error getting data. Please try again.", {
+                        type: "error"
+                    });
+                }
+            }
+        });
+
+        $scope.$watch('instructorListSectionDetailDS.pagingOptions', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                if (newVal.currentPage && oldVal.currentPage) {
+                    $scope.instructorListSectionDetailDS.load({
+                        all: false,
+                        paging: true
+                    });
+                }
+            }
+        }, true);
+        $scope.$watch('instructorListSectionDetailDS.sortInfo', function(newVal, oldVal) {
+            if ((newVal.fields.join(',') !== oldVal.fields.join(',')) || (newVal.directions.join(',') !== oldVal.directions.join(','))) {
+                $scope.instructorListSectionDetailDS.load({
+                    all: false,
+                    paging: true
+                });
+            }
+        }, true);
+        $scope.sortChanged = function(grid, sortColumns) {
+            if (sortColumns.length > 0 && sortColumns[0] && sortColumns[0].name) {
+                let fields = [];
+                let directions = [];
+                let count = 0;
+                sortColumns.forEach(function(it) {
+                    fields[count] = it.name;
+                    directions[count] = it.sort ? it.sort.direction : 'asc';
+                    count++;
+                });
+                grid.options.sortInfo.fields = fields;
+                grid.options.sortInfo.directions = directions;
+            }
+
+        }
+        $scope.$watch('instructorListSectionDetailDS.selectedRecords[0]', function(newVal, oldVal) {
+            if (newVal !== oldVal) {
+                $scope.instructorListSectionDetailDS.setCurrentRecord(newVal);
+
+            }
+        });
+
+        $scope.stuRegCrseSchedAttributes = pbResource('virtualDomains.stuRegCrseSchedAttributes');
+
+        $scope.selectBlockAttributeSelectDS = pbDataSet($scope,
+        {
+            componentId: "selectBlockAttributeSelect",
+            resource: $scope.stuRegCrseSchedAttributes,
+            queryParams: '{term : $scope.selectBlockTermSelect}',
+            autoPopulate: false,
+            selectValueKey: "ATTR_CODE",
+            selectInitialValue: null
+
+            ,
+            onUpdate: function(item) {
+                //show spinner
+                $("#loader").css("display", "block");
+
+                //Reset Error Count
+                $scope.errorCount = 0;
+
+                $scope.attr = $scope.selectBlockAttributeSelect;
+
+                //reset $scope.subj as it's possible the selected subject doesn't have a course with the attribute selected
+                $scope.stuRegCrseSchedDefaultSubjDataDS.load();
+
+
+
+
+
+            }
+        });
+        //$scope.subj = "";
+        //$scope.subjListTableDS.load();
+        //$scope.courseListTableDS.load();
+        //$scope.courseListSectionDetailDS.load();
+
+
+        $scope.selectBlockInstructorSearch_onUpdate = function() {
+
+            var input,
+                filter,
+                table,
+                tr,
+                td,
+                i,
+                txtValue;
+
+            input = $scope.selectBlockInstructorSearch;
+            filter = input.toUpperCase();
+            table = document.getElementById("pbid-instructorListTable");
+            tr = table.getElementsByTagName("tr");
+
+            // Loop through all table rows, and hide those who don't match the search query
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        };
+        $scope.subjListTable_onClick = function(currentSelection, context) {
+            //show spinner
+            $("#loader").css("display", "block");
+
+            //Reset Error Count
+            $scope.errorCount = 0;
+
+            //remove highlight from previous selection row
+            $scope.prevDivName = "pbid-subjListTable-td-subjListTableSubjectLink-" + $scope.subjNum;
+            document.getElementById($scope.prevDivName).classList.remove("td-selected");
+
+            //add highlight to current selection row
+            $scope.tdDivNum = currentSelection.ROW_NUMBER - 1;
+            $scope.tdDivName = "pbid-subjListTable-td-subjListTableSubjectLink-" + $scope.tdDivNum;
+            document.getElementById($scope.tdDivName).classList.add("td-selected");
+
+            //set subjNum to current selection row so subsequent clicks can remove highlight
+            $scope.subjNum = $scope.tdDivNum;
+
+            //set the subj param and load the courses/sections
+            $scope.subj = currentSelection.SUBJECT;
+            $scope.courseListTableDS.load();
+            $scope.courseListSectionDetailDS.load();
+        };
+        $scope.courseListTable_onClick = function(currentSelection, context) {
+            //Scroll page to selected course
+
+            document.getElementById(currentSelection.COURSE).scrollIntoView(true);
+            document.getElementById(currentSelection.COURSE).focus();
+        };
+        $scope.instructorListTable_onClick = function(currentSelection, context) {
+            //show spinner
+            $("#loader").css("display", "block");
+
+            //Reset Error Count
+            $scope.errorCount = 0;
+
+            //remove highlight from previous selection row
+            $scope.prevDivName = "pbid-instructorListTable-td-instructorListTableInstructorLink-" + $scope.ucidNum;
+            document.getElementById($scope.prevDivName).classList.remove("td-selected");
+
+            //add highlight to current selection row
+            $scope.tdDivNum = currentSelection.ROW_NUMBER - 1;
+            $scope.tdDivName = "pbid-instructorListTable-td-instructorListTableInstructorLink-" + $scope.tdDivNum;
+            document.getElementById($scope.tdDivName).classList.add("td-selected");
+
+            //set subjNum to current selection row so subsequent clicks can remove highlight
+            $scope.ucidNum = $scope.tdDivNum;
+
+            //set the ucid param and load the courses/sections
+            $scope.ucid = currentSelection.UCID;
+            $scope.instructorListSectionDetailDS.load();
+        };
+        $scope.rightBlockToggleScrollToTop_onClick = function() {
+            if ($scope.selectBlockPageViewSelect == "COURSE") {
+                document.getElementById("pbid-courseListSectionExportToExcel").scrollIntoView(true);
+                document.getElementById("pbid-courseListSectionExportToExcel").focus();
+
+            } else if ($scope.selectBlockPageViewSelect == "INSTRUCTOR") {
+                document.getElementById("pbid-instructorListSectionExportToExcel").scrollIntoView(true);
+                document.getElementById("pbid-instructorListSectionExportToExcel").focus();
+            }
+        };
+        $scope.rightBlockToggleRefresh_onClick = function() {
+            //show spinner
+            $("#loader").css("display", "block");
+
+            //Reset Error Count
+            $scope.errorCount = 0;
+
+            if ($scope.selectBlockPageViewSelect == "COURSE") {
+                $scope.courseListTableDS.load();
+                $scope.courseListSectionDetailDS.load();
+
+            } else if ($scope.selectBlockPageViewSelect == "INSTRUCTOR") {
+                $scope.instructorListSectionDetailDS.load();
+
+            }
+        };
+        $scope.rightBlockToggleLeftBlock_onClick = function() {
+            var x = document.getElementById("pbid-leftBlock");
+            var toggleElement = document.getElementById("toggleBadge")
+
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                toggleElement.innerHTML = '<i class="fa fa-chevron-circle-left" aria-hidden="true"></i>';
+
+            } else {
+                x.style.display = "none";
+                toggleElement.innerHTML = '<i class="fa fa-chevron-circle-right" aria-hidden="true"></i>';
+            }
+        };
+        $scope.courseListSectionExportToExcel_onClick = function() {
+            $scope.courseListSectionExcelDataDS.load();
+        };
+        $scope.instructorListSectionExportToExcel_onClick = function() {
+            $scope.courseListSectionExcelDataDS.load();
+        };
+
+
+        $scope.leftBlock_visible = true;
+        $scope.selectBlock_visible = true;
+        $scope.selectBlockAttributeSelectBlock_visible = true;
+        $scope.selectBlockInstructorSearchBlock_visible = false;
+        $scope.subjListBlock_visible = true;
+        $scope.courseListBlock_visible = true;
+        $scope.instructorListBlock_visible = false;
+        $scope.rightBlock_visible = true;
+        $scope.rightBlockToggle_visible = true;
+        $scope.courseListSectionBlock_visible = true;
+        $scope.instructorListSectionBlock_visible = false;
+        $scope.stuRegCrseSched_style = '';
+        $scope.bootstrap_style = '';
+        $scope.fonts_style = '';
+        $scope.LoadingSpinner_style = '';
+        $scope.HideHeaderJS_style = '';
+        $scope.leftBlock_style = '';
+        $scope.selectBlock_style = '';
+        $scope.selectBlockTermSelect_style = '';
+        $scope.selectBlockPageViewSelect_style = '';
+        $scope.selectBlockAttributeSelectBlock_style = '';
+        $scope.selectBlockAttributeSelect_style = '';
+        $scope.selectBlockInstructorSearchBlock_style = '';
+        $scope.selectBlockInstructorSearch_style = '';
+        $scope.subjListBlock_style = 'pull-left';
+        $scope.subjListTable_style = 'table table-condensed table-hover table-bordered selectTableInitial';
+        $scope.subjListTableSubjectLink_style = '';
+        $scope.courseListBlock_style = 'pull-left';
+        $scope.courseListTable_style = 'table table-condensed table-hover table-bordered';
+        $scope.courseListTableCourseNumbLink_style = '';
+        $scope.instructorListBlock_style = '';
+        $scope.instructorListTable_style = 'table table-condensed table-hover table-bordered';
+        $scope.instructorListTableInstructorLink_style = '';
+        $scope.rightBlock_style = '';
+        $scope.rightBlockToggle_style = '';
+        $scope.rightBlockToggleScrollToTop_style = '';
+        $scope.rightBlockToggleRefresh_style = '';
+        $scope.rightBlockToggleLeftBlock_style = '';
+        $scope.courseListSectionBlock_style = '';
+        $scope.courseListSectionExportToExcel_style = 'pull-right';
+        $scope.courseListSectionBlockBr_style = '';
+        $scope.courseListSectionDetail_style = '';
+        $scope.courseListSectionDetailSections_style = 'table';
+        $scope.instructorListSectionBlock_style = '';
+        $scope.instructorListSectionExportToExcel_style = 'pull-right';
+        $scope.instructorListSectionBlockBr_style = '';
+        $scope.instructorListSectionDetail_style = '';
+        $scope.instructorListSectionDetailSections_style = 'table';
+
+        // Copyright 2013-2016 Ellucian Company L.P. and its affiliates.
+        pbAddCommon($scope);
+        $scope.externalScope = $scope
+    } /* End Controller */
+    ;
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='https://theme.elluciancloud.com/001G000000iHmp4IAC/theme/getTheme?name=njit&template=BannerExtensibility-9_9'>
+
+    <div ng-cloak id="enhanceUserExpDiv" dir="auto">
+        <xe-popup-modal show-close-button="modalcloseButtonShownEnhanceUserExp" show="modalEnhanceUserExpShown" focusbackelement="tools" pageheader="Enhance your Experience" aria-live="assertive">
+            <popup-content ng-if="showEnhanceUserExpDiv">
+                <div class="xe-modal-footer" id="enhanceUserExpPopupContentId">
+                    <p class="xe-modal-footer-copyright-info">
+
+                                            Please indicate whether we may use 3rd party analytics and non-essential cookies to improve your experience and our applications.
+                        <br>
+                        <br>
+
+                                            If you agree, the data we collect through these tools may be stored and processed in any country in which Ellucian or its sub-processors maintain facilities or personnel, including the United States.
+                        <br>
+                        <br>
+
+                                            Read the Ellucian privacy notice for more on cookies and analytics 
+                        <a target="_blank" href="https://www.ellucian.com/privacy" role="link">Ellucian Privacy Notice</a>
+                    </p>
+                </div>
+                <div class="enhanceUserExpButtonContainer" id="buttonContainer">
+                    <xe-button ng-click="saveUsageTracking(false)" xe-id="noThanksBtn" xe-field="noThanksBtn" xe-disabled="disableNoThanksButton" xe-type="secondary" xe-label="No Thanks"></xe-button>
+                    <xe-button ng-click="saveUsageTracking(true)" xe-id="acceptBtn" xe-field="acceptBtn" xe-disabled="disableAcceptButton" xe-type="primary" xe-label="Accept"></xe-button>
+                </div>
+                <footer class="enhanceUserExpFooter" role="contentinfo">
+                    <p>&copy; 2013-2024 Ellucian Company L.P. and its affiliates. All rights reserved.
+                                    </p>
+                </footer>
+            </popup-content>
+        </xe-popup-modal>
+    </div>
+
+</head>
+<body>
+    <div id="dialogAppDiv"></div>
+    <div id="popupContainerDiv"></div>
+    <div ng-app="BannerOnAngular">
+        <div id="splash"></div>
+        <div id="spinner" class="spinner spinner-img" style="display:none;"></div>
+
+        <script type="text/javascript" src="/BannerExtensibility/assets/modules/pageBuilder-mf.js"></script>
+
+        <script type="text/javascript">
+        var mepcodeChanged = '';
+        if (null !== mepcodeChanged && undefined !== mepcodeChanged && mepcodeChanged == "true") {
+            $(document).bind('notification-use-ready', function(e) {
+                mepcodeNotificationAddition(window.mepCode)
+            });
+        }
+        </script>
+
+        <div id="content" role="main" ng-controller="CustomPageController_stuRegCrseSched" class="customPage container-fluid">
+
+            <div id='pbid-bootstrap-container' ng-class='bootstrap_style' class="pb-page-item-container pb-literal" role="application">
+                <span id='pbid-bootstrap' class="pb-page pb-literal pb-item " tabindex="-1">
+                    <!-- Latest compiled and minified CSS -->
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+                    <!-- Optional theme -->
+                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+                    <!-- Latest compiled and minified JavaScript -->
+                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+                </span>
+
+            </div>
+            <div id='pbid-fonts-container' ng-class='fonts_style' class="pb-page-item-container pb-literal" role="application">
+                <span id='pbid-fonts' class="pb-page pb-literal pb-item " tabindex="-1">
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700">
+                    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+                </span>
+
+            </div>
+            <div id='pbid-LoadingSpinner-container' ng-class='LoadingSpinner_style' class="pb-page-item-container pb-literal" role="application">
+                <span id='pbid-LoadingSpinner' class="pb-page pb-literal pb-item " tabindex="-1">
+                    <div style="display:block" id="loader"></div>
+                </span>
+
+            </div>
+            <div id='pbid-HideHeaderJS-container' ng-class='HideHeaderJS_style' class="pb-page-item-container pb-literal" role="application">
+                <span id='pbid-HideHeaderJS' class="pb-page pb-literal pb-item " tabindex="-1">
+                    <script>
+                    //Hiding sign in and banner menu
+
+                    $(document).ready(function() {
+
+                        //remove Sign In section
+                        if ($("#header-main-section-east-part").length > 0) {
+                            // $("#header-main-section-east-part").remove();    //remove element completely
+                            //update to only remove the user conrtrols so we can send alert to user
+                            $("#header-east-part-user-controls").remove(); //remove element completely
+                        }
+
+                        //remove Banner Menu
+                        if ($("#bannerMenuDiv").length > 0) {
+                            $("#bannerMenuDiv").remove(); // if you want tp remove element completely
+                        }
+
+                    });
+                    </script>
+                </span>
+
+            </div>
+            <div id='pbid-leftBlock' ng-class='leftBlock_style' class="pb-block" ng-show="leftBlock_visible" null>
+
+                <div id='pbid-selectBlock' ng-class='selectBlock_style' class="pb-block" ng-show="selectBlock_visible" null>
+                    <div id='pbid-selectBlockTermSelect-container' ng-class='selectBlockTermSelect_style' class="pb-block-item-container pb-select" role="application">
+
+                        <select id='pbid-selectBlockTermSelect' ng-keypress=selectBlockTermSelectDS.openDropDown("pbid-selectBlockTermSelect-Option",$event); class="pb-block pb-select pb-item " ng-model="selectBlockTermSelect" ng-change="selectBlockTermSelectDS.setCurrentRecord(selectBlockTermSelect);selectBlockTermSelectDS.onUpdate(item);" ng-options="item.TERM as item.TERM_DESC for item in selectBlockTermSelectDS.data" tabindex="0">
+                            <option id="pbid-selectBlockTermSelect-Option" style="display:none" value=""></option>
+                        </select>
+                    </div>
+                    <div id='pbid-selectBlockPageViewSelect-container' ng-class='selectBlockPageViewSelect_style' class="pb-block-item-container pb-select" role="application">
+
+                        <select id='pbid-selectBlockPageViewSelect' ng-keypress=selectBlockPageViewSelectDS.openDropDown("pbid-selectBlockPageViewSelect-Option",$event); class="pb-block pb-select pb-item " ng-model="selectBlockPageViewSelect" ng-change="selectBlockPageViewSelectDS.setCurrentRecord(selectBlockPageViewSelect);selectBlockPageViewSelectDS.onUpdate(item);" ng-options="item.CODE as item.DESC for item in selectBlockPageViewSelectDS.data" tabindex="0">
+                            <option id="pbid-selectBlockPageViewSelect-Option" style="display:none" value=""></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id='pbid-selectBlockAttributeSelectBlock' ng-class='selectBlockAttributeSelectBlock_style' class="pb-block" ng-show="selectBlockAttributeSelectBlock_visible" null>
+                    <div id='pbid-selectBlockAttributeSelect-container' ng-class='selectBlockAttributeSelect_style' class="pb-block-item-container pb-select" role="application">
+
+                        <select id='pbid-selectBlockAttributeSelect' ng-keypress=selectBlockAttributeSelectDS.openDropDown("pbid-selectBlockAttributeSelect-Option",$event); class="pb-block pb-select pb-item " ng-model="selectBlockAttributeSelect" ng-change="selectBlockAttributeSelectDS.setCurrentRecord(selectBlockAttributeSelect);selectBlockAttributeSelectDS.onUpdate(item);" ng-options="item.ATTR_CODE as item.ATTR_DESC for item in selectBlockAttributeSelectDS.data" tabindex="0">
+                            <option id="pbid-selectBlockAttributeSelect-Option" value="">Show All</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id='pbid-selectBlockInstructorSearchBlock' ng-class='selectBlockInstructorSearchBlock_style' class="pb-block" ng-show="selectBlockInstructorSearchBlock_visible" null>
+                    <div id='pbid-selectBlockInstructorSearch-container' ng-class='selectBlockInstructorSearch_style' class="pb-block-item-container pb-text" role="application">
+                        <input tabindex="0" id='pbid-selectBlockInstructorSearch' type="text" class="pb-block pb-text pb-item " name="selectBlockInstructorSearch" ng-change="selectBlockInstructorSearch_onUpdate()" placeholder="Search" aria-label="&#x2007;&#x2007;" ng-model="selectBlockInstructorSearch"/>
+
+                    </div>
+                </div>
+
+                <div id='pbid-subjListBlock' ng-class='subjListBlock_style' class="pb-block" ng-show="subjListBlock_visible" null>
+
+                    <table id='pbid-subjListTable' ng-class='subjListTable_style' role="table" aria-labelledby="pbid-subjListTable-label">
+                        <caption></caption>
+                        <thead id='pbid-subjListTable-th'>
+                            <tr id='pbid-subjListTable-thr' role="row">
+                                <th id='pbid-subjListTabledata-header-subjListTableSubjectLink' role="columnheader" tabindex="0"></th>
+                            </tr>
+                        </thead>
+                        <tbody id='pbid-subjListTable-tb'>
+                            <!-- Do this for every object in objects -->
+                            <tr id='pbid-subjListTable-tr-{{$index}}' ng-repeat="item in subjListTableDS.data" ng-click=subjListTable_onClick(item) role="row">
+                                <td id='pbid-subjListTable-td-subjListTableSubjectLink-{{$index}}' role="cell">
+                                    <div id='pbid-subjListTableSubjectLink-container-{{$index}}' ng-class='subjListTableSubjectLink_style' class="pb-htable-item-container pb-literal" role="application">
+                                        <span id='pbid-subjListTableSubjectLink-{{$index}}' class="pb-htable pb-literal pb-item " tabindex="-1">
+                                            <a href="">{{ item.SUBJECT }}</a>
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id='pbid-subjListTable-record-control-container' class="pb-record-control">
+                        <!-- pagination -->
+                        <div class="pagination-container">
+                            <div id='pbid-subjListTable-pagination-container' class="pagination-controls" ng-show='subjListTableDS.totalCount > subjListTableDS.pagingOptions.pageSize'>
+                                <button id='pbid-subjListTable-pagination-prev-button' class="secondary previous" ng-disabled="subjListTableDS.pagingOptions.currentPage == 1" ng-click="subjListTableDS.pagingOptions.currentPage=subjListTableDS.pagingOptions.currentPage - 1" type="button" aria-label="Previous Page" title="Previous Page"></button>
+                                <span id='pbid-subjListTable-pagination-page-count'>
+                                        {{subjListTableDS.pagingOptions.currentPage}}/{{subjListTableDS.numberOfPages()}}
+                                        </span>
+                                <button id='pbid-subjListTable-pagination-next-button' class="secondary next" ng-disabled="subjListTableDS.pagingOptions.currentPage >= subjListTableDS.totalCount/subjListTableDS.pagingOptions.pageSize " ng-click="subjListTableDS.pagingOptions.currentPage=subjListTableDS.pagingOptions.currentPage + 1" type="button" aria-label="Next Page" title="Next Page"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id='pbid-courseListBlock' ng-class='courseListBlock_style' class="pb-block" ng-show="courseListBlock_visible" null>
+
+                    <table id='pbid-courseListTable' ng-class='courseListTable_style' role="table" aria-labelledby="pbid-courseListTable-label">
+                        <caption></caption>
+                        <thead id='pbid-courseListTable-th'>
+                            <tr id='pbid-courseListTable-thr' role="row">
+                                <th id='pbid-courseListTabledata-header-courseListTableCourseNumbLink' role="columnheader" tabindex="0"></th>
+                            </tr>
+                        </thead>
+                        <tbody id='pbid-courseListTable-tb'>
+                            <!-- Do this for every object in objects -->
+                            <tr id='pbid-courseListTable-tr-{{$index}}' ng-repeat="item in courseListTableDS.data" ng-click=courseListTable_onClick(item) role="row">
+                                <td id='pbid-courseListTable-td-courseListTableCourseNumbLink-{{$index}}' role="cell">
+                                    <div id='pbid-courseListTableCourseNumbLink-container-{{$index}}' ng-class='courseListTableCourseNumbLink_style' class="pb-htable-item-container pb-literal" role="application">
+                                        <span id='pbid-courseListTableCourseNumbLink-{{$index}}' class="pb-htable pb-literal pb-item " tabindex="-1">
+                                            <a href="">{{ item.COURSE_NUMB }}</a>
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id='pbid-courseListTable-record-control-container' class="pb-record-control">
+                        <!-- pagination -->
+                        <div class="pagination-container">
+                            <div id='pbid-courseListTable-pagination-container' class="pagination-controls" ng-show='courseListTableDS.totalCount > courseListTableDS.pagingOptions.pageSize'>
+                                <button id='pbid-courseListTable-pagination-prev-button' class="secondary previous" ng-disabled="courseListTableDS.pagingOptions.currentPage == 1" ng-click="courseListTableDS.pagingOptions.currentPage=courseListTableDS.pagingOptions.currentPage - 1" type="button" aria-label="Previous Page" title="Previous Page"></button>
+                                <span id='pbid-courseListTable-pagination-page-count'>
+                                        {{courseListTableDS.pagingOptions.currentPage}}/{{courseListTableDS.numberOfPages()}}
+                                        </span>
+                                <button id='pbid-courseListTable-pagination-next-button' class="secondary next" ng-disabled="courseListTableDS.pagingOptions.currentPage >= courseListTableDS.totalCount/courseListTableDS.pagingOptions.pageSize " ng-click="courseListTableDS.pagingOptions.currentPage=courseListTableDS.pagingOptions.currentPage + 1" type="button" aria-label="Next Page" title="Next Page"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id='pbid-instructorListBlock' ng-class='instructorListBlock_style' class="pb-block" ng-show="instructorListBlock_visible" null>
+
+                    <table id='pbid-instructorListTable' ng-class='instructorListTable_style' role="table" aria-labelledby="pbid-instructorListTable-label">
+                        <caption></caption>
+                        <thead id='pbid-instructorListTable-th'>
+                            <tr id='pbid-instructorListTable-thr' role="row">
+                                <th id='pbid-instructorListTabledata-header-instructorListTableInstructorLink' role="columnheader" tabindex="0"></th>
+                            </tr>
+                        </thead>
+                        <tbody id='pbid-instructorListTable-tb'>
+                            <!-- Do this for every object in objects -->
+                            <tr id='pbid-instructorListTable-tr-{{$index}}' ng-repeat="item in instructorListTableDS.data" ng-click=instructorListTable_onClick(item) role="row">
+                                <td id='pbid-instructorListTable-td-instructorListTableInstructorLink-{{$index}}' role="cell">
+                                    <div id='pbid-instructorListTableInstructorLink-container-{{$index}}' ng-class='instructorListTableInstructorLink_style' class="pb-htable-item-container pb-literal" role="application">
+                                        <span id='pbid-instructorListTableInstructorLink-{{$index}}' class="pb-htable pb-literal pb-item " tabindex="-1">
+                                            <a href="">{{ item.PROFESSOR }}</a>
+                                        </span>
+
+                                    </div>
+                                </td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div id='pbid-instructorListTable-record-control-container' class="pb-record-control">
+                        <!-- pagination -->
+                        <div class="pagination-container">
+                            <div id='pbid-instructorListTable-pagination-container' class="pagination-controls" ng-show='instructorListTableDS.totalCount > instructorListTableDS.pagingOptions.pageSize'>
+                                <button id='pbid-instructorListTable-pagination-prev-button' class="secondary previous" ng-disabled="instructorListTableDS.pagingOptions.currentPage == 1" ng-click="instructorListTableDS.pagingOptions.currentPage=instructorListTableDS.pagingOptions.currentPage - 1" type="button" aria-label="Previous Page" title="Previous Page"></button>
+                                <span id='pbid-instructorListTable-pagination-page-count'>
+                                        {{instructorListTableDS.pagingOptions.currentPage}}/{{instructorListTableDS.numberOfPages()}}
+                                        </span>
+                                <button id='pbid-instructorListTable-pagination-next-button' class="secondary next" ng-disabled="instructorListTableDS.pagingOptions.currentPage >= instructorListTableDS.totalCount/instructorListTableDS.pagingOptions.pageSize " ng-click="instructorListTableDS.pagingOptions.currentPage=instructorListTableDS.pagingOptions.currentPage + 1" type="button" aria-label="Next Page" title="Next Page"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='pbid-rightBlock' ng-class='rightBlock_style' class="pb-block" ng-show="rightBlock_visible" null>
+
+                <div id='pbid-rightBlockToggle' ng-class='rightBlockToggle_style' class="pb-block" ng-show="rightBlockToggle_visible" null>
+                    <div id='pbid-rightBlockToggleScrollToTop-container' ng-class='rightBlockToggleScrollToTop_style' class="pb-block-item-container pb-button" role="application">
+                        <button id='pbid-rightBlockToggleScrollToTop' class="pb-block pb-button pb-item border-0 rounded-circle" ng-click="rightBlockToggleScrollToTop_onClick()" type="button">
+                            <a class="badge" title="Scroll to Top">
+                                <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+                            </a>
+                        </button>
+
+                    </div>
+                    <div id='pbid-rightBlockToggleRefresh-container' ng-class='rightBlockToggleRefresh_style' class="pb-block-item-container pb-button" role="application">
+                        <button id='pbid-rightBlockToggleRefresh' class="pb-block pb-button pb-item border-0 rounded-circle" ng-click="rightBlockToggleRefresh_onClick()" type="button">
+                            <a class="badge" title="Refresh">
+                                <i class="fa fa-refresh" aria-hidden="true"></i>
+                            </a>
+                        </button>
+
+                    </div>
+                    <div id='pbid-rightBlockToggleLeftBlock-container' ng-class='rightBlockToggleLeftBlock_style' class="pb-block-item-container pb-button" role="application">
+                        <button id='pbid-rightBlockToggleLeftBlock' class="pb-block pb-button pb-item border-0 rounded-circle" ng-click="rightBlockToggleLeftBlock_onClick()" type="button">
+                            <a class="badge" title="Toggle side bar">
+                                <span id="toggleBadge">
+                                    <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                                </span>
+                            </a>
+                        </button>
+
+                    </div>
+                </div>
+
+                <div id='pbid-courseListSectionBlock' ng-class='courseListSectionBlock_style' class="pb-block" ng-show="courseListSectionBlock_visible" null>
+                    <div id='pbid-courseListSectionExportToExcel-container' ng-class='courseListSectionExportToExcel_style' class="pb-block-item-container pb-button" role="application">
+                        <button id='pbid-courseListSectionExportToExcel' class="pb-block pb-button pb-item btn btn-success" ng-click="courseListSectionExportToExcel_onClick()" type="button">
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                             Export as Excel
+                        </button>
+
+                    </div>
+                    <div id='pbid-courseListSectionBlockBr-container' ng-class='courseListSectionBlockBr_style' class="pb-block-item-container pb-literal" role="application">
+                        <span id='pbid-courseListSectionBlockBr' class="pb-block pb-literal pb-item " tabindex="-1">
+                            <div id="courseTop" style="text-align: center">
+                                <h2>
+                                    Course Schedule</h2.>
+                                    <br/>
+                                    <br/>
+                            </div>
+                        </span>
+
+                    </div>
+                    <div ng-class='courseListSectionDetail_style' id='pbid-courseListSectionDetail' class="pb-detail-container">
+                        <div id='pbid-courseListSectionDetailcontainer-{{$index}}' class="pb-detail-record" ng-repeat="item in courseListSectionDetailDS.data">
+
+                            <div id="pbid-courseListSectionDetailSections-container-{{$index}}" ng-class="courseListSectionDetailSections_style" class="pb-detail-item-container pb-display">
+
+                                <span id="pbid-courseListSectionDetailSections-{{$index}}" class="pb-detail pb-display pb-item" ng-bind-html="item.SECTIONS_TABLE | to_trusted"></span>
+                            </div>
+                        </div>
+                        <div id='pbid-courseListSectionDetail-record-control-container' class="pb-record-control">
+                            <!-- pagination -->
+                            <div class="pagination-container">
+                                <div id='pbid-courseListSectionDetail-pagination-container' class="pagination-controls" ng-show='courseListSectionDetailDS.totalCount > courseListSectionDetailDS.pagingOptions.pageSize'>
+                                    <button id='pbid-courseListSectionDetail-pagination-prev-button' class="secondary previous" ng-disabled="courseListSectionDetailDS.pagingOptions.currentPage == 1" ng-click="courseListSectionDetailDS.pagingOptions.currentPage=courseListSectionDetailDS.pagingOptions.currentPage - 1" type="button" aria-label="Previous Page" title="Previous Page"></button>
+                                    <span id='pbid-courseListSectionDetail-pagination-page-count'>
+                                            {{courseListSectionDetailDS.pagingOptions.currentPage}}/{{courseListSectionDetailDS.numberOfPages()}}
+                                            </span>
+                                    <button id='pbid-courseListSectionDetail-pagination-next-button' class="secondary next" ng-disabled="courseListSectionDetailDS.pagingOptions.currentPage >= courseListSectionDetailDS.totalCount/courseListSectionDetailDS.pagingOptions.pageSize " ng-click="courseListSectionDetailDS.pagingOptions.currentPage=courseListSectionDetailDS.pagingOptions.currentPage + 1" type="button" aria-label="Next Page" title="Next Page"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id='pbid-instructorListSectionBlock' ng-class='instructorListSectionBlock_style' class="pb-block" ng-show="instructorListSectionBlock_visible" null>
+                    <div id='pbid-instructorListSectionExportToExcel-container' ng-class='instructorListSectionExportToExcel_style' class="pb-block-item-container pb-button" role="application">
+                        <button id='pbid-instructorListSectionExportToExcel' class="pb-block pb-button pb-item btn btn-success" ng-click="instructorListSectionExportToExcel_onClick()" type="button">
+                            <i class="fa fa-table" aria-hidden="true"></i>
+                             Export as Excel
+                        </button>
+
+                    </div>
+                    <div id='pbid-instructorListSectionBlockBr-container' ng-class='instructorListSectionBlockBr_style' class="pb-block-item-container pb-literal" role="application">
+                        <span id='pbid-instructorListSectionBlockBr' class="pb-block pb-literal pb-item " tabindex="-1">
+                            <div id="instructorTop" style="text-align: center">
+                                <h2>
+                                    Course Schedule</h2.>
+                                    <br/>
+                                    <br/>
+                            </div>
+                        </span>
+
+                    </div>
+                    <div ng-class='instructorListSectionDetail_style' id='pbid-instructorListSectionDetail' class="pb-detail-container">
+                        <div id='pbid-instructorListSectionDetailcontainer-{{$index}}' class="pb-detail-record" ng-repeat="item in instructorListSectionDetailDS.data">
+
+                            <div id="pbid-instructorListSectionDetailSections-container-{{$index}}" ng-class="instructorListSectionDetailSections_style" class="pb-detail-item-container pb-display">
+
+                                <span id="pbid-instructorListSectionDetailSections-{{$index}}" class="pb-detail pb-display pb-item" ng-bind-html="item.SECTIONS_TABLE | to_trusted"></span>
+                            </div>
+                        </div>
+                        <div id='pbid-instructorListSectionDetail-record-control-container' class="pb-record-control">
+                            <!-- pagination -->
+                            <div class="pagination-container">
+                                <div id='pbid-instructorListSectionDetail-pagination-container' class="pagination-controls" ng-show='instructorListSectionDetailDS.totalCount > instructorListSectionDetailDS.pagingOptions.pageSize'>
+                                    <button id='pbid-instructorListSectionDetail-pagination-prev-button' class="secondary previous" ng-disabled="instructorListSectionDetailDS.pagingOptions.currentPage == 1" ng-click="instructorListSectionDetailDS.pagingOptions.currentPage=instructorListSectionDetailDS.pagingOptions.currentPage - 1" type="button" aria-label="Previous Page" title="Previous Page"></button>
+                                    <span id='pbid-instructorListSectionDetail-pagination-page-count'>
+                                            {{instructorListSectionDetailDS.pagingOptions.currentPage}}/{{instructorListSectionDetailDS.numberOfPages()}}
+                                            </span>
+                                    <button id='pbid-instructorListSectionDetail-pagination-next-button' class="secondary next" ng-disabled="instructorListSectionDetailDS.pagingOptions.currentPage >= instructorListSectionDetailDS.totalCount/instructorListSectionDetailDS.pagingOptions.pageSize " ng-click="instructorListSectionDetailDS.pagingOptions.currentPage=instructorListSectionDetailDS.pagingOptions.currentPage + 1" type="button" aria-label="Next Page" title="Next Page"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div ng-controller='homePageUrlCtr'>
+            <div ng-view></div>
+            <input name='pageURL' value='#' id='homeURL' hidden='true'/>
+        </div>
+
+        <script>
+        var extensibilityInfo = {
+            "application": "BannerExtensibility",
+            "page": "customPage",
+            "url": "/BannerExtensibility/",
+            "pluginUrl": "/BannerExtensibility/plugins/web-app-extensibility-10.3/static/html/",
+            "admin": false,
+            "extensions": {},
+            "resources": null
+        }
+        window.mepCode = '';
+        </script>
+        <script type="text/javascript">
+        window.uiGridI18n = {}
+        window.uiGridI18n = {
+            ngAggregateLabel: 'items',
+            ngGroupPanelDescription: 'Drag a column header here and drop it to group by that column.',
+            ngSearchPlaceHolder: 'Search...',
+            ngMenuText: 'Choose Columns:',
+            ngShowingItemsLabel: 'Showing Records:',
+            ngTotalItemsLabel: 'Records Found:',
+            ngSelectedItemsLabel: 'Selected Records:',
+            ngPageSizeLabel: 'Per Page',
+            ngPagerFirstTitle: 'First Page',
+            ngPesheetInclude: 'Next Page',
+            ngPagerPrevTitle: 'Previous Page',
+            ngPagerLastTitle: 'Last Page',
+            direction: 'ltr',
+            styleLeft: 'left',
+            styleRight: 'right',
+            maxPageLabel: 'of',
+            pageLabel: 'Page',
+            next: 'Next page',
+            last: 'Last page',
+            previous: 'Previous page',
+            first: 'First page'
+        };
+        yepnope({
+            test: window.JSON,
+            nope: '/BannerExtensibility/assets/json2.js'
+        });
+
+        $(window).on('load', function() {
+            _.defer(function() {
+                $("#splash").remove();
+            });
+            $('#content').find('button, a, input:not([class~="pb-boolean"]), select, textarea, label, [tabindex]:not([tabindex="-1"])').not(':header').eq(0).focus();
+        });
+        $.i18n.map = {
+            "aurora.areas_label_about_title": "About",
+            "aurora.areas_label_browse_description": "Banner Menu. Short cut key is Alt+M",
+            "aurora.areas_label_browse_title": "Banner Menu Alt+M",
+            "aurora.areas_label_home_description": "Home. Short cut key is Alt+Q",
+            "aurora.areas_label_home_title": "Home Alt+Q",
+            "aurora.areas_label_profile_description": "Profile. Short cut is Alt+P",
+            "aurora.areas_label_profile_title": "Profile Alt+P",
+            "aurora.areas_label_tools_description": "Tools. Short cut is Alt+L",
+            "aurora.areas_label_tools_title": "Tools Alt+L",
+            "aurora.guestuserdetails_signin": "Guest Sign In",
+            "aurora.openitems_label_closeAll": "Close All",
+            "aurora.openitems_label_closeSelected": "Close Selected",
+            "aurora.preferences_label": "Preferences",
+            "aurora.privacypolicy_label": "Privacy Policy",
+            "aurora.toolsmenu.keyboard.shortcuts.heading": "Keyboard shortcuts",
+            "aurora.userdetails_help": "Help",
+            "aurora.userdetails_signin": "Sign In",
+            "aurora.userdetails_signin_description": "Sign In. Short cut is Ctrl+Shift+F",
+            "aurora.userdetails_signin_title": "Sign In Ctrl+Shift+F",
+            "aurora.userdetails_signout": "Sign Out",
+            "backbone.paging.controls.count.per.page": "{0} per page",
+            "backbone.paging.controls.first": "First",
+            "backbone.paging.controls.last": "Last",
+            "backbone.paging.controls.next": "Next",
+            "backbone.paging.controls.of": "of",
+            "backbone.paging.controls.oneof": "1 of",
+            "backbone.paging.controls.page": "Page",
+            "backbone.paging.controls.page.of.pages": "Page {0} of {1}",
+            "backbone.paging.controls.per.page": "Per Page",
+            "backbone.paging.controls.previous": "Previous",
+            "barchart.viewmore.help.label": "Drag mouse to the left/right or use left/right arrow keys to see more data",
+            "changeExpiredPassword.password.match.error": "Passwords did not match",
+            "changeExpiredPassword.password.required.error": "All Password Fields are required.",
+            "dataTable.columnFilter.label": "Show/Hide Column",
+            "dataTable.columnFilter.selectAll": "Select All",
+            "dataTable.sort.ascending.label": "ascending",
+            "dataTable.sort.descending.label": "descending",
+            "dataTable.sortable.label": "Sortable",
+            "datepicker.toggle.text": "Show Hijri",
+            "default.calendar": "gregorian",
+            "default.calendar.gregorian.translation": "en_US@calendar=gregorian",
+            "default.calendar1": "gregorian",
+            "default.century.above.pivot": "1900",
+            "default.century.below.pivot": "2000",
+            "default.century.pivot": "50",
+            "default.copyright.endyear": "2024",
+            "default.copyright.startyear": "2013",
+            "default.date.format": "MM/dd/yyyy",
+            "default.dateEntry.format": "MM/dd/yy",
+            "default.firstDayOfTheWeek": "0",
+            "default.gregorian.dayNames": "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday",
+            "default.gregorian.dayNamesMin": "Su,Mo,Tu,We,Th,Fr,Sa",
+            "default.gregorian.dayNamesShort": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+            "default.gregorian.monthNames": "January,February,March,April,May,June,July,August,September,October,November,December",
+            "default.gregorian.monthNamesShort": "Jan,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec",
+            "default.language.direction": "ltr",
+            "default.none": "None",
+            "default.percent": "%",
+            "default.time.am": "AM",
+            "default.time.decrement": "Decrement",
+            "default.time.format": "HH:mm",
+            "default.time.increment": "Increment",
+            "default.time.pm": "PM",
+            "default.time.watermark.format": "HH:mm",
+            "default.timepicker.time.format": "HH:mm",
+            "footer.company_name": "{0}-{1} Ellucian Company L.P. and its affiliates.",
+            "footer.other_info": "All rights reserved.",
+            "js.banner.general.aip.notification.prompt.dismiss": "Dismiss",
+            "js.banner.general.aip.notification.prompt.message": "You have active action item(s) available for your review.",
+            "js.banner.general.aip.notification.prompt.view.actionitems": "View Action Item(s)",
+            "js.dataTable.page": "Page",
+            "js.dataTable.pageOf": "of",
+            "js.dataTable.pageOfOne": "1 of",
+            "js.dataTable.sEmptyTable": "No data available in table",
+            "js.dataTable.sInfo": "Records found: _TOTAL_",
+            "js.dataTable.sInfoEmpty": "Records found: 0",
+            "js.dataTable.sInfoFiltered": "(filtered from _MAX_ total records)",
+            "js.dataTable.sLengthMenu": "Per Page _MENU_",
+            "js.dataTable.sZeroRecords": "Nothing found - sorry",
+            "js.datepicker.dateFormat": "mm/dd/yyyy",
+            "js.datepicker.info": "To change year use CTRL + SHIFT + Page Up or Page DOWN keys. To change month use Page Up or Page DOWN keys. To select week-day use UP or DOWN or LEFT or RIGHT keys. To reset to current date use CTRL + SHIFT + HOME. Use F9 again or ESC to close the calendar.",
+            "js.datepicker.nextJumpStatus": "Show the next year     \n Ctrl + Shift + PgDn",
+            "js.datepicker.nextStatus": "Show the next month PgDn",
+            "js.datepicker.prevJumpStatus": "Show the previous year \n Ctrl + Shift + PgUp",
+            "js.datepicker.prevStatus": "Show the previous month PgUp",
+            "js.datepicker.selectText": "Select",
+            "js.datepicker.tooltipDateFormat": "DD, MMMM d, yyyy",
+            "js.grid.columns.button": "Columns",
+            "js.grid.noData": "No data available.",
+            "js.grid.recordsFound": "Records: {0}",
+            "js.grid.toggleSortBy": "Sort by {0}",
+            "js.input.datepicker.dateformatinfo": "Date format is",
+            "js.input.datepicker.info": "Press F9 to open/close the calendar",
+            "js.input.timepicker.info": "Press F9 to open/close the Timepicker",
+            "js.net.hedtech.banner.ajax.continue.button": "Continue",
+            "js.net.hedtech.banner.ajax.error.message": "A server call failed with error code '{0}'.",
+            "js.net.hedtech.banner.ajax.loading": "Loading",
+            "js.net.hedtech.banner.ajax.reload.button": "Reload",
+            "js.net.hedtech.banner.ajax.reload.prompt": "You may need to reload the page to continue.",
+            "js.net.hedtech.banner.ajax.timeout.message": "The server is not responding.",
+            "js.net.hedtech.banner.logout.timeout.acknowledgement": "Sign In",
+            "js.net.hedtech.banner.logout.timeout.message": "Session expired.",
+            "js.net.hedtech.banner.logout.timeout.promptMessage": "You are no longer using a valid session.  You must log back in.",
+            "js.notification.NoChangesToSave": "No Changes To Save",
+            "js.notification.countlabel": "{0} Notifications",
+            "js.notification.delete.template.success": "Template {0} deleted successfully",
+            "js.notification.delete.theme.success": "Theme {0} deleted successfully",
+            "js.notification.description": "Short cut key is Alt+N",
+            "js.notification.dirtyCheck.cancelActionButton": "Cancel",
+            "js.notification.dirtyCheck.doNotSaveActionButton": "No",
+            "js.notification.dirtyCheck.message": "Changes have been made.",
+            "js.notification.dirtyCheck.promptMessage": "Do you want to save changes?",
+            "js.notification.dirtyCheck.saveActionButton": "Yes",
+            "js.notification.help": "Use TAB to browse through notifications, ESC to close and ALT+N to open or close the notifications",
+            "js.notification.inactivityTimer.keepAliveButton": "No",
+            "js.notification.inactivityTimer.logoutButton": "Yes",
+            "js.notification.inactivityTimer.message": "You have been inactive.  Your session will be logged out shortly for security reasons.",
+            "js.notification.inactivityTimer.promptMessage": "Would you like to logout now?",
+            "js.notification.label": "Notifications",
+            "js.notification.load.theme.success": "Theme {0} loaded successfully",
+            "js.notification.mep.buttons.continue": "Continue",
+            "js.notification.mep.buttons.logout": "Logout",
+            "js.notification.mep.changed.onLoad": "This session can access only {0} information. You can continue in this session, or logout and login again to change institutions.",
+            "js.notification.save.emptyName.error": "Theme name is required to create a new theme",
+            "js.notification.savePrompt.doNotSaveActionButton": "No",
+            "js.notification.savePrompt.message": "You have unsaved changes. Would you like to save?",
+            "js.notification.savePrompt.saveActionButton": "Yes",
+            "js.notification.success": "Save Successful",
+            "js.notification.title": "Notifications Alt+N",
+            "js.notification.upload.error": "Error while saving the file, please contact the administrator",
+            "js.notification.upload.nodata": "Uploaded file doesn't contain any data",
+            "js.notification.upload.success": "File uploaded successfully",
+            "js.notification.upload.type": "Upload file should be either JSON/SCSS format",
+            "js.number.decimal": ".",
+            "js.timepicker.cancel": "CANCEL",
+            "js.timepicker.set": "SET",
+            "nameDataTable.column.common.button.label": "Go",
+            "nameDataTable.column.common.createDate.heading": "Date Created",
+            "nameDataTable.column.common.modifiedDate.heading": "Last Updated",
+            "nameDataTable.column.common.nodata": "No Results Found",
+            "nameDataTable.column.common.pagination.ofLabel": "of",
+            "nameDataTable.column.common.pagination.pageLabel": "Page",
+            "nameDataTable.column.common.pagination.perPageLabel": "Per Page",
+            "nameDataTable.column.common.pagination.recordsFoundLabel": "Total Results",
+            "nameDataTable.column.page.name.heading": "Page Name",
+            "nameDataTable.column.stylesheet.name.heading": "Stylesheet Name",
+            "nameDataTable.column.virtualDomain.name.heading": "Virtual Domain Name",
+            "nameDataTable.popup.page.search.placeholder": "Search By Page Name",
+            "nameDataTable.popup.stylesheet.pageheader": "Load Stylesheet",
+            "nameDataTable.popup.stylesheet.search.placeholder": "Search By Stylesheet Name",
+            "nameDataTable.popup.virtualDomain.pageheader": "Load Virtual Domain",
+            "nameDataTable.popup.virtualDomain.search.placeholder": "Search By Virtual Domain Name",
+            "net.hedtech.banner.title.shortcut": "{0}&lt;br&gt;{1}",
+            "notification.dirtyCheck.beforeUnload.promptMessage": "Changes have been made. Data entered has not been saved.",
+            "numeric.currency.value": "Numeric Input",
+            "numeric.decimal.value": "Decimal Input",
+            "numeric.edit.unavailable": "Edit Unavailable",
+            "numeric.percent.value": "Percentage Input",
+            "pagination.first.label": "First page",
+            "pagination.last.label": "Last page",
+            "pagination.next.label": "Next page",
+            "pagination.page.aria.label": "Go To Page.",
+            "pagination.page.label": "Page",
+            "pagination.page.of.label": "of",
+            "pagination.page.shortcut.label": "Go To Page",
+            "pagination.per.page.label": "Per Page",
+            "pagination.previous.label": "Previous page",
+            "pagination.record.found": "Results found",
+            "pb.template.upload.ok.label": "Finished",
+            "pillbox.friday": "Friday",
+            "pillbox.friday.abbreviation": "F",
+            "pillbox.monday": "Monday",
+            "pillbox.monday.abbreviation": "M",
+            "pillbox.saturday": "Saturday",
+            "pillbox.saturday.abbreviation": "S",
+            "pillbox.sunday": "Sunday",
+            "pillbox.sunday.abbreviation": "S",
+            "pillbox.thursday": "Thursday",
+            "pillbox.thursday.abbreviation": "T",
+            "pillbox.tuesday": "Tuesday",
+            "pillbox.tuesday.abbreviation": "T",
+            "pillbox.wednesday": "Wednesday",
+            "pillbox.wednesday.abbreviation": "W",
+            "platform.shortcut.aria.collapsed": "Collapsed. Use Tab Key to Navigate to Next Section.",
+            "platform.shortcut.aria.dialog.description": "This dialog lists all the keyboard shortcuts specific to this application",
+            "platform.shortcut.aria.expanded": "Expanded. Use Tab Key to Navigate to Next Section and Down arrow key to navigate to each item in the section",
+            "platform.shortcut.aria.focussed": "Use Tab key to navigate to next section or shortcut.",
+            "platform.shortcut.aria.instructnavigate": "Use Tab Key to Navigate to Next Section and Down arrow key to navigate to each item in the section",
+            "platform.shortcut.aria.sectionheading": "Press Enter to Expand/Collapse the section",
+            "screenreader.notification.error": "Error notification",
+            "screenreader.notification.flash": "Flash notification",
+            "screenreader.notification.warning": "Warning prompt notification",
+            "search.aria.label": "Search text field. The short cut is Alt+Y.",
+            "search.label": "Search",
+            "search.title": "Search (Alt+Y)",
+            "securityQA.error": "Please enter Security Question(s) and Answer(s)",
+            "securityQA.invaild.pin": "Invalid PIN. Please re-enter PIN",
+            "securityQA.invalid.answer": "Answer may not contain the &lt; or &gt; characters",
+            "securityQA.invalid.length.answer": "Answer has to be {0} characters or more",
+            "securityQA.invalid.length.question": "Question has to be {0} characters or more",
+            "securityQA.invalid.number.question": "Each question can be selected or defined, not both. Please choose a question from the drop down or define your own question.",
+            "securityQA.invalid.question": "Question may not contain the &lt; or &gt; characters",
+            "select2.format.input.too.long.singular": "Please delete 1 character",
+            "select2.format.input.too.short.plural": "Please enter {0} more characters",
+            "select2.format.input.too.short.singular": "Please enter 1 more character",
+            "select2.format.load.more": "Loading more results...",
+            "select2.format.loading.failed": "Loading failed",
+            "select2.format.multiple.result": "{0} results are available, use up and down arrow keys to navigate.",
+            "select2.format.one.result": "One result is available, press enter to select it.",
+            "select2.format.searching": "Searching...",
+            "select2.format.selection.too.big.singular": "You can only select 1 item",
+            "select2.no.matches": "No Matches Found",
+            "sspb.css.cssManager.cssName.label": "Select a name for publishing:",
+            "sspb.css.cssManager.description.label": "Enter a description:",
+            "sspb.css.cssManager.upload.file.label": "Select a file to upload:",
+            "sspb.css.cssManager.upload.label": "Upload Stylesheet",
+            "sspb.css.cssManager.upload.server.response.label": "Server Response:",
+            "sspb.custom.page.default.affirm": "OK",
+            "sspb.page.visualbuilder.loadpage.unsaved.changes.message": "All unsaved changes to the current page will be lost. Continue to load page?",
+            "sspb.page.visualbuilder.name.invalid.pattern.message": "Name should start with a letter (a-Z) and is followed by letters, digits and underscores",
+            "sspb.page.visualbuilder.name.required.message": "Name is Required",
+            "sspb.page.visualbuilder.page.cancel.message": "Cancel",
+            "sspb.page.visualbuilder.page.continue.message": "Yes",
+            "survey.confirm.button.cancel": "Cancel",
+            "survey.confirm.button.save": "Save",
+            "survey.confirm.title": "View Ethnicity and Race",
+            "survey.edit.button.askMeLater": "Ask Me Later",
+            "survey.edit.button.continue": "Continue",
+            "survey.edit.title": "Update Ethnicity and Race",
+            "survey.ethinicity.multiple.selection.invalid": "You may only select one checkbox for Ethnicity.",
+            "survey.ethnicity.hispanic": "Hispanic or Latino",
+            "survey.ethnicity.nothispanic": "Not Hispanic or Latino",
+            "textbox.validation.maxlength": "The maximum Character length should be",
+            "textbox.validation.required": "This field is required",
+            "timepicker.am.pm.aria.label": "Meridiem list, press up and down arrow keys to change the meridiem and left arrow to move to the minutes list.Press Escape to cancel and Enter to Select Time.",
+            "timepicker.error.format.validation": "Invalid time format",
+            "timepicker.hour.aria.label": "Hours list, press up and down arrow keys to Change Hours. Press right to move to Minutes section",
+            "timepicker.min.aria.24hrs.label": "Minutes list, press up and down arrow keys to change Minutes. Press left arrow key to move to Hours list.",
+            "timepicker.min.aria.label": "Minutes list, press up and down arrow keys to change Minutes. Press left arrow key to move to Hours list and Right to Move to meridiem list",
+            "timepicker.shortcuts.aria.label": "Press Escape to cancel and Enter to Select Time.",
+            "timepicker.textbox.aria.label": "The Time Format is",
+            "ui.pillbox.off": "Not on {0}",
+            "ui.pillbox.on": "On {0}",
+            "ui.pillbox.tooltip.label": "{0}",
+            "ui.pillbox.tooltip.separator": ",",
+            "uiselect.minimum.input.text": "Please enter {0} or more characters",
+            "uiselect.no.results.found.text": "No Result Found!",
+            "uiselect.option.selected": "{0}",
+            "uiselect.search.disabled.results": "Use up and down arrow keys to navigate",
+            "uiselect.search.results": "Searching ... {0} results are available, use up and down arrow keys to navigate.",
+            "upload.properties.language.arabic": "Arabic",
+            "upload.properties.language.englishau": "English (Australia)",
+            "upload.properties.language.englishgb": "English (Great Britain)",
+            "upload.properties.language.englishie": "English (Ireland)",
+            "upload.properties.language.englishin": "English (India)",
+            "upload.properties.language.englishus": "English (United States)",
+            "upload.properties.language.fetchFail": "unable to list the properties file",
+            "upload.properties.language.frenchca": "French (Canada)",
+            "upload.properties.language.frenchfr": "French (France)",
+            "upload.properties.language.portuguesebr": "Portuguese (Brazil)",
+            "upload.properties.language.primary": "Choose a Primary Locale",
+            "upload.properties.language.spanishla": "Spanish (Latin America)",
+            "upload.properties.language.uploadFail": "unable to upload the properties file: {0}",
+            "userpreference.notification.failure.message": "Unable to change your Language Setting, please try again later.",
+            "userpreference.notification.success.message": "Language Setting was successful, please re-login for the preferences to take effect.",
+            "userpreference.popup.enhanceExp": "Data Sharing",
+            "userpreference.popup.enhanceExp.heading": "Enhance your Experience",
+            "userpreference.popup.language.close": "Close",
+            "userpreference.popup.language.heading": "Language Setting",
+            "userpreference.privacy.setting.section": "Privacy Setting",
+            "xe.alert.msg.saved": "Extensions Saved. Please refresh the page to show the extensions applied to the page.",
+            "xe.btn.label.cancel": "Cancel",
+            "xe.btn.label.submit": "Submit",
+            "xe.extension.editor.window.title": "Extension Editor",
+            "xe.extensions.json.editor.error": "Error parsing JSON extensions : {0}",
+            "xe.js.notification.editextensions.close.cancel": "Cancel",
+            "xe.js.notification.editextensions.close.ok": "OK",
+            "xe.js.notification.editextensions.close.warningMessage": "Closing this window will discard all changes. Do you wish to continue?",
+            "xe.menu.extensibility.SecurityConfiguration": "Security Configuration",
+            "xe.menu.extensibility.themeEditor": "Theme Editor",
+            "xe.menu.extensibility.uploadProperties": "Upload Properties",
+            "xe.menu.extensions.edit": "Edit Extensions",
+            "xe.menu.extensions.status": "Show Page Statistics / Status",
+            "xe.menu.section.extensibility": "Extensibility",
+            "xe.page.errors": "Errors",
+            "xe.page.status": "Page Statistics {0}",
+            "xe.text.chars.left": "Remaining Characters",
+            "xe.text.chars.remaining.aria": "Remaining Characters : {0}",
+            "xe.text.limit.over": "Character Limit of {0} has been reached",
+            "xe.text.max.chars": "Characters Max"
+        };
+        </script>
+
+        <script type="text/javascript" src="/BannerExtensibility/assets/lib/jquery/i18n/jquery.ui.datepicker-en-us.js"></script>
+        <script type="text/javascript" src="/BannerExtensibility/assets/lib/angular/i18n/angular-locale_en-us.js"></script>
+        <script type="text/javascript" src="/BannerExtensibility/assets/modules/pageBuilderDate-mf.js"></script>
+
+</body>
+</html>
+
