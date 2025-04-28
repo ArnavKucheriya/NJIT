@@ -1,0 +1,23 @@
+procedure prog18 is
+	-- { Clean program testing input of strings } 
+	
+	fname, level: string;		
+Begin
+    putline("Enter your first name:");
+    get(fname);
+    put ("Hello ");
+    putline(fname);
+    putline("Enter your college level as (freshman, sophomore, ...):");
+    get(level);
+	if(level = "freshman") then
+		putline("You should have completed 30 or less hours!");
+	elsif (level = "sophmore") then
+	 	putline("You should have completed 31-60 hours!");
+	elsif(level = "junior") then
+		putline("You should have completed 61-90 hours!");
+	elsif(level = "senior") then
+		putline("You should have completed 91-120 hours!");
+	else
+		putline("Sorry this is not a valid college level!!");
+	end if;
+END prog18;

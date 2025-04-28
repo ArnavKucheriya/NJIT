@@ -1,0 +1,16 @@
+procedure prog10 is
+	-- { Testing substring range bounds } 
+	
+	y: integer := 2;
+	x, y_1 : integer := 5;	
+	str1 : string := "Welcome";
+	str2, str3 : string;
+	ch : character;
+	
+begin
+	str2 := str1(x..y);--substringing
+	ch := str1(5);--indexing
+	putline(str2);
+	putline(ch);
+	
+END prog10;

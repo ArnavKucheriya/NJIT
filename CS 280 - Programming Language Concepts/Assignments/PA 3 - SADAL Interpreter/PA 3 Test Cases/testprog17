@@ -1,0 +1,17 @@
+procedure prog17 is
+	-- { Testing Get Statement input } 
+	
+	w2: integer := 5;
+	x, y_1 : integer;	
+	str : string := "Welcome";
+	z : float;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	put("Enter an integer value: ");
+	get(x); putline("");
+	put("Entered Value x = "); putline(x);
+	y_1 := x mod w2;
+	put("Value of (x mod w2) = ");
+	putline(y_1);
+END prog17;

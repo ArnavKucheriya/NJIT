@@ -1,0 +1,12 @@
+procedure prog5 is
+	-- { Testing Illegal mixed-mode operand types for arithematic operator } 
+	
+	x, y_1, w234: integer := 2;	
+	str : string := "Welcome";
+	z, w: float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+begin
+	w := z + w;
+	w := y_1 + z;
+END prog5;

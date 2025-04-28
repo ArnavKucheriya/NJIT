@@ -1,0 +1,14 @@
+procedure prog1 is
+	-- { Testing Use of uninitialized variable } 
+	
+	x, y_1, w234: integer;	
+	str : string := "Welcome";
+	z : float;
+	flag , bing : boolean:= false ; 
+	
+begin
+	putline("Value of z= "); 
+	put(z);
+	put("Value of str= ");
+	putline(str);
+END prog1;

@@ -1,0 +1,16 @@
+procedure prog11 is
+	-- { Testing Out of Bound index value }
+	
+	y: integer := 2;
+	x, z : integer := 5;	
+	str1 : string := "Welcome";
+	str2, str3 : string;
+	ch : character;
+	
+begin
+	str2 := str1(y..x);--substringing
+	ch := str1(11);--indexing
+	putline(str2);
+	putline(ch);
+	
+END prog11;	

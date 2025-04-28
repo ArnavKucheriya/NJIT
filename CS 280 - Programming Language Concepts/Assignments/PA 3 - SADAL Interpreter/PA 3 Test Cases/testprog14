@@ -1,0 +1,26 @@
+procedure prog14 is
+	-- { Clean program testing if statement elsif-then-clause } 
+	
+	x: integer := 16;	
+	y_1, w2: integer := 9;
+	str : string := "Welcome";
+	z, w: float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	w := z * 10.0;
+	if bing then
+	  	z := z + w;
+	  	x := x * 2e4;
+	  	put("Results of z and x = ");
+	  	put(z); put(", ");
+		putline(x);
+	elsif (x /= 0) then
+		w2 := x * y_1;
+	else
+		w2 := x MOD y_1;
+	end if;
+	put("Value of (w2 - x) = ");
+	putline(w2 - x);
+	
+END prog14;

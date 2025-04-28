@@ -1,0 +1,26 @@
+procedure prog16 is
+	-- { Clean program testing if statement else-clause } 
+	
+	z: float := 32.0;	
+	y_1, w2: integer := 9;
+	x, w: float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	w := x * 10.0;
+	z := w * 2.0e4;
+	if bing then
+	  	y_1 := y_1 + w2;
+	  	put("Results of y_1 = ");
+	  	putline(y_1); 
+	elsif (z = 0.0) then
+		w2 := w2 * y_1;
+	else
+		x := z / x;
+		put("Value of x = ");
+		putline(x);	
+	end if;
+	put("Value of (x * 1.0e-3) = ");
+	putline(x * 1.0e-3);
+	
+END prog16;

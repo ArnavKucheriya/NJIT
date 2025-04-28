@@ -1,0 +1,12 @@
+procedure prog12 is
+	-- { Testing exponentiation operation} 
+	
+	x : float := 2.0;
+	y_1, w2 : float := 5.0;	
+		
+Begin
+	y_1 := x ** w2;
+	put("Value of y_1= ");
+	
+	putline(y_1);
+END prog12;

@@ -1,0 +1,19 @@
+procedure prog15 is
+	-- { Testing string operations in a clean program } 
+	
+	x, y_1, w234: integer := 2;	
+	str1 : string := "Welcome";
+	str2, str3 : string;
+	ch : character;
+	
+begin
+	str2 := str1(3..6);--substringing
+	ch := str1(5);--indexing
+	put("str1(3..6) result: ");
+	putline(str2);
+	put("str1(5) character is: ");
+	putline(ch);
+	str3 := str2 & "back";--concatenation
+	put("Concatenation result: ") ;
+	putline(str3);
+END prog15;
