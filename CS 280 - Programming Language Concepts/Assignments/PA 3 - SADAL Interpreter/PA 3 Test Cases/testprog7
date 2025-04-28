@@ -1,0 +1,17 @@
+procedure prog7 is
+	-- { Illegal if condition type} 
+	
+	x, y_1, w234: integer := 2;	
+	str : string := "Welcome";
+	z, w: float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	
+	if x then
+	  	z := z + Y_1;
+	  	x := x -1;
+	end if;
+	put("Value of z= ");
+	putline(z);
+END prog7;

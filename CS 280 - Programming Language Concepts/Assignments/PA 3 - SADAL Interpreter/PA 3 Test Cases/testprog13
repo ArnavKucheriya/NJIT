@@ -1,0 +1,25 @@
+procedure prog13 is
+	-- { Clean program testing if statement then-clause } 
+	
+	x, y_1, w2: integer := 7;	
+	str : string := "Welcome";
+	z, w: float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	w := z * 10.0;
+	if not bing then
+	  	z := z + w;
+	  	x := x * 4;
+	  	put("Results of z and x respectively: ");
+	  	put(z); put(", ");
+		putline(x);
+	elsif (x = 0) then
+		w2 = 0;
+	else
+		w2 := x * y_1;
+	end if;
+	put("Value of (w2 * x) = ");
+	putline(w2 * x);
+	
+END prog13;

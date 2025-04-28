@@ -1,0 +1,12 @@
+procedure prog19 is
+	-- { Clean program testing input of real numbers } 
+	
+	Kilo, Pound: float;		
+Begin
+    putline("Converter from Kilograms to Pounds calculator");
+    putline("Enter a weight in Kilograms:");
+    get(Kilo);
+    put ("Weight in Pounds is: ");
+    putline(Kilo*2.20462);
+    
+END prog19;

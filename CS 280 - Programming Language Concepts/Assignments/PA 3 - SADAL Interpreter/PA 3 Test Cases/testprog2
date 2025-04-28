@@ -1,0 +1,13 @@
+procedure prog2 is
+	-- { Testing Illegal operand type for Sign operation } 
+	
+	x, y_1, w234: integer := 0;	
+	str : string := -"Welcome";
+	z : float := not 0.25;
+	flag , bing : boolean:= false ; 
+	
+begin
+	put("Value of x = "); putline(x);
+	put("Value of z = ");
+	putline(z);
+END prog1;

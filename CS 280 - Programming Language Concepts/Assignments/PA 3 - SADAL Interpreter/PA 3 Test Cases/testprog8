@@ -1,0 +1,20 @@
+procedure prog8 is
+	-- { Invalid expression type for an Elsif condition } 
+	
+	x, y_1, w234: integer := 2;	
+	str : string := "Welcome";
+	z, w: float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+Begin
+	
+	if bing then
+	  	z := z + Y_1;
+	  	x := x -1;
+	elsif x then
+		w123 = 0;
+	end if;
+	put("Value of z= ");
+	putline(z);
+	
+END prog8;

@@ -1,0 +1,11 @@
+procedure prog3 is
+	-- { Testing Procedure Name mismatch with closing end identifier } 
+	
+	x, y_1, w234: integer := 0;	
+	str : string := "Welcome";
+	z : float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+begin
+	flag := not bing;
+END prog1;

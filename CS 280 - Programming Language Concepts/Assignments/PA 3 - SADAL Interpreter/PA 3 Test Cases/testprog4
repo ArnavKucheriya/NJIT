@@ -1,0 +1,12 @@
+procedure prog4 is
+	-- { Testing Illegal Expression type for the assigned variable } 
+	
+	x, y_1, w234: integer := 0;	
+	str : string := "Welcome";
+	z : float :=  0.25;
+	flag , bing : boolean:= false ; 
+	
+begin
+	z := y_1;
+	putline(z);
+END prog4;

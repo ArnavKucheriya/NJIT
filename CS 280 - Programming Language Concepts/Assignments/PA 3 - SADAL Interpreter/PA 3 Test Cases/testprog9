@@ -1,0 +1,12 @@
+procedure prog9 is
+	-- { Testing divide by zero operation} 
+	
+	x : float := 0.0;
+	y_1, w2 : float := 5.0;	
+		
+Begin
+	y_1 := w2/x;
+	put("Value of y_1= ");
+	
+	putline(y_1);
+END prog9;
