@@ -8,6 +8,8 @@
 
 using namespace std;
 
+string ProgName; // Procedure Name to match at end
+
 map<string, bool> defVar;             // Variable defined or not
 map<string, Token> SymTable;           // Symbol table for type info
 map<string, Value> TempsResults;       // Value storage (variables, temporaries)
@@ -52,6 +54,7 @@ bool Prog(istream& in, int& line)
 		tok = Parser::GetNextToken(in, line);
 		if (tok.GetToken() == IDENT) {
 			string identstr = tok.GetLexeme();
+			ProgName = identstr; 
 			
 			if (!(defVar.find(identstr)->second))
 			{
@@ -114,114 +117,158 @@ bool Prog(istream& in, int& line)
 //ProcBody ::= DeclPart BEGIN StmtList END ProcName ;
 bool ProcBody(istream& in, int& line)
 {
-	bool status = false, f2;
-	LexItem tok;
-	
-	status = DeclPart(in, line);
-	if (!status)
-	{
-		ParseError(line, "Incorrect Declaration Part.");
-		return status;
-	}
-	
-	tok = Parser::GetNextToken(in, line);
-	if(tok == BEGIN)
-	{
-		f2 = StmtList(in, line);
-		if(!f2)
-		{
-			ParseError(line, "Incorrect Proedure Body.");
-			return false;
-		}
-		tok = Parser::GetNextToken(in, line);
-		if (tok.GetToken() == END)
-		{	
-			tok = Parser::GetNextToken(in, line);
-			if (tok.GetToken() == IDENT)
-			{
-				tok = Parser::GetNextToken(in, line);
-				if (tok.GetToken() == SEMICOL)
-				{
-					return true;
-				}
-				else
-				{
-					ParseError(line, "Missing end of procedure semicolon.");
-					return false;
-				}
-			}
-			else
-			{
-				ParseError(line, "Missing END of procedure name.");
-				return false;
-			}
-		}
-		else
-		{
-			ParseError(line, "Missing END of Procedure Keyword.");
-			return false;
-		}
-	}
-    ParseError(line, "Incorrect procedure body.");
-	return false;
+    LexItem tok = Parser::GetNextToken(in, line);
+
+    if (tok == BEGIN)
+    {
+        bool f2 = StmtList(in, line);
+        if (!f2)
+        {
+            ParseError(line, "Incorrect Procedure Body.");
+            return false;
+        }
+    }
+    else if (tok == IDENT)
+    {
+        Parser::PushBackToken(tok);
+        bool status = DeclPart(in, line);
+        if (!status)
+        {
+            return false; // No more errors, just stop
+        }
+
+        tok = Parser::GetNextToken(in, line);
+        if (tok != BEGIN)
+        {
+            ParseError(line, "Missing BEGIN after Declarations.");
+            return false;
+        }
+
+        bool f2 = StmtList(in, line);
+        if (!f2)
+        {
+            ParseError(line, "Incorrect Procedure Body.");
+            return false;
+        }
+    }
+    else
+    {
+        ParseError(line, "Missing BEGIN after Declarations.");
+        return false;
+    }
+
+    // --- After StmtList, parse END ProcName;
+    tok = Parser::GetNextToken(in, line);
+    if (tok.GetToken() == END)
+    {
+        int endLine = line;
+        tok = Parser::GetNextToken(in, line);
+        if (tok.GetToken() == IDENT)
+        {
+            if (tok.GetLexeme() != ProgName)
+            {
+                ParseError(endLine + 1, "Procedure name mismatch in closing end identifier.");
+                return false;
+            }
+
+            tok = Parser::GetNextToken(in, line);
+            if (tok.GetToken() == SEMICOL)
+            {
+                return true;
+            }
+            else
+            {
+                ParseError(line, "Missing end of procedure semicolon.");
+                return false;
+            }
+        }
+        else
+        {
+            ParseError(line, "Missing END of procedure name.");
+            return false;
+        }
+    }
+    else
+    {
+        ParseError(line, "Missing END of Procedure Keyword.");
+        return false;
+    }
 }//end of ProcBody
 
 //StmtList ::= Stmt { Stmt }
 bool StmtList(istream& in, int& line)
 {
-	bool status;
-	LexItem tok;
-	
-	status = Stmt(in, line);
-	tok = Parser::GetNextToken(in, line);
-	while(status && (tok != END && tok != ELSIF && tok != ELSE))
-	{
-		Parser::PushBackToken(tok);
-		status = Stmt(in, line);
-		tok = Parser::GetNextToken(in, line);
-	}
-	if(!status)
-	{
-		ParseError(line, "Syntactic error in statement list.");
-		return false;
-	}
-	Parser::PushBackToken(tok); 
-	return true;
+	LexItem tok = Parser::GetNextToken(in, line);
+
+    // Immediately exit if no statement and we see END/ELSIF/ELSE
+    if (tok == END || tok == ELSIF || tok == ELSE) {
+        Parser::PushBackToken(tok);
+        return true;
+    }
+
+    Parser::PushBackToken(tok);
+
+    bool status = Stmt(in, line);
+    if (!status) {
+        ParseError(line, "Syntactic error in statement list.");
+        return false;
+    }
+
+    tok = Parser::GetNextToken(in, line);
+    while (tok != END && tok != ELSIF && tok != ELSE)
+    {
+        Parser::PushBackToken(tok);
+        status = Stmt(in, line);
+        if (!status) {
+            ParseError(line, "Syntactic error in statement list.");
+            return false;
+        }
+        tok = Parser::GetNextToken(in, line);
+    }
+
+    Parser::PushBackToken(tok);
+    return true;
 }//End of StmtList
 
 //DeclPart ::= DeclStmt { DeclStmt }
 bool DeclPart(istream& in, int& line) {
-	bool status = false;
-	LexItem tok;
-	
-	status = DeclStmt(in, line);
-	if(status)
-	{
-		tok = Parser::GetNextToken(in, line);
-		if(tok == BEGIN )
-		{
-			Parser::PushBackToken(tok);
-			return true;
-		}
-		else 
-		{
-			Parser::PushBackToken(tok);
-			status = DeclPart(in, line);
-		}
-	}
-	else
-	{
-		ParseError(line, "Non-recognizable Declaration Part.");
-		return false;
-	}
-	return true;
-}//end of DeclPart function
+    LexItem tok = Parser::GetNextToken(in, line);
+
+    if (tok == BEGIN)
+    {
+        Parser::PushBackToken(tok);
+        return true;
+    }
+    else if (tok == IDENT)
+    {
+        Parser::PushBackToken(tok);
+        
+        // ONLY HERE, not inside DeclStmt
+        Ids_List = new vector<string>;
+
+        bool status = DeclStmt(in, line);
+        if (!status)
+        {
+            ParseError(line, "Incorrect Declaration Statement.");
+            delete Ids_List;
+            return false;
+        }
+
+        delete Ids_List;
+        return DeclPart(in, line);
+    }
+    else
+    {
+        ParseError(line, "Missing BEGIN after Declarations.");
+        return false;
+    }
+}
+//end of DeclPart function
 
 //DeclStmt ::= IDENT {, IDENT } : Type [:= Expr]
 bool DeclStmt(istream& in, int& line)
 {
 	LexItem t;
-    Ids_List = new vector<string>;
 	bool status = IdentList(in, line);
 	bool flag;
 	
@@ -281,8 +328,6 @@ status = Range(in, line, val1, val2);
 			t = Parser::GetNextToken(in, line);
 			if(t == SEMICOL)
 			{
-                delete Ids_List;
-
 				return true;
 			}
 			else
@@ -865,13 +910,13 @@ bool Primary(istream& in, int& line, int sign, Value& retVal)
     LexItem tok = Parser::GetNextToken(in, line);
 
     if (tok == IDENT) {
-        Parser::PushBackToken(tok);
-        if (!Name(in, line, sign, retVal)) {
-            ParseError(line, "Invalid reference to a variable.");
-            return false;
-        }
-        return true;
-    }
+		Parser::PushBackToken(tok);
+		if (!Name(in, line, sign, retVal)) {
+			return false;  // Dont call ParseError here again
+		}
+		return true;
+	}
+	
     else if (tok == ICONST) {
         int val = stoi(tok.GetLexeme());
         retVal = Value(val);
