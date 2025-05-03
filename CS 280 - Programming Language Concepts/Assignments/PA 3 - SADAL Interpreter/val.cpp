@@ -1,171 +1,184 @@
-// a_kucheriya_val.cpp
-// Implementation of Value Class for SADAL Interpreter
 #include "val.h"
-#include <iostream>
 #include <cmath>
+#include <stdexcept>
+#include <iomanip>
+#include <sstream>
+
 using namespace std;
 
-// Helper function for runtime errors
-Value RunTimeErr(const string& errmsg) {
-    cerr << "RUNTIME ERROR: " << errmsg << endl;
-    return Value(); // Return an error Value
-}
-
-// + Operator
+// Addition
 Value Value::operator+(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-
-    if (IsInt() && op.IsInt()) return Value(Itemp + op.Itemp);
-    if (IsReal() && op.IsReal()) return Value(Rtemp + op.Rtemp);
-
-    return RunTimeErr("Illegal Mixed Type Operands for +");
+    if (IsInt() && op.IsInt())
+        return Value(Itemp + op.Itemp);
+    if (IsReal() && op.IsReal())
+        return Value(Rtemp + op.Rtemp);
+    return Value(); // Error
 }
 
-// - Operator
+// Subtraction
 Value Value::operator-(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-
-    if (IsInt() && op.IsInt()) return Value(Itemp - op.Itemp);
-    if (IsReal() && op.IsReal()) return Value(Rtemp - op.Rtemp);
-
-    return RunTimeErr("Illegal Mixed Type Operands for -");
+    if (IsInt() && op.IsInt())
+        return Value(Itemp - op.Itemp);
+    if (IsReal() && op.IsReal())
+        return Value(Rtemp - op.Rtemp);
+    return Value(); // Error
 }
 
-// * Operator
+// Multiplication
 Value Value::operator*(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-
-    if (IsInt() && op.IsInt()) return Value(Itemp * op.Itemp);
-    if (IsReal() && op.IsReal()) return Value(Rtemp * op.Rtemp);
-
-    return RunTimeErr("Illegal Mixed Type Operands for *");
+    if (IsInt() && op.IsInt())
+        return Value(Itemp * op.Itemp);
+    if (IsReal() && op.IsReal())
+        return Value(Rtemp * op.Rtemp);
+    // String * Int: repeat string
+    if (IsString() && op.IsInt() && op.Itemp >= 0) {
+        string res;
+        for (int i = 0; i < op.Itemp; ++i)
+            res += Stemp;
+        return Value(res);
+    }
+    return Value(); // Error
 }
 
-// / Operator
+// Division
 Value Value::operator/(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-
-    if ((op.IsInt() && op.Itemp == 0) || (op.IsReal() && op.Rtemp == 0))
-        return RunTimeErr("Illegal Division by Zero");
-
-    if (IsInt() && op.IsInt()) return Value(Itemp / op.Itemp);
-    if (IsReal() && op.IsReal()) return Value(Rtemp / op.Rtemp);
-
-    return RunTimeErr("Illegal Mixed Type Operands for /");
+    if (IsInt() && op.IsInt() && op.Itemp != 0)
+        return Value(Itemp / op.Itemp);
+    if (IsReal() && op.IsReal() && op.Rtemp != 0.0)
+        return Value(Rtemp / op.Rtemp);
+    return Value(); // Error (division by zero or bad types)
 }
 
-// MOD Operator
+// Modulus
 Value Value::operator%(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-
-    if (IsInt() && op.IsInt()) {
-        if (op.Itemp == 0) return RunTimeErr("Illegal Modulus by Zero");
+    if (IsInt() && op.IsInt() && op.Itemp != 0)
         return Value(Itemp % op.Itemp);
-    }
-
-    return RunTimeErr("MOD Operator requires Integer Operands");
+    return Value(); // Error (bad types or zero)
 }
 
-// == Operator
+// Equality
 Value Value::operator==(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-    if (T != op.T) return RunTimeErr("Illegal Mixed Type Operands for ==");
-
+    if (T != op.T) return Value(false);
     switch (T) {
-        case VINT: return Value(Itemp == op.Itemp);
-        case VREAL: return Value(Rtemp == op.Rtemp);
+        case VINT:    return Value(Itemp == op.Itemp);
+        case VREAL:   return Value(Rtemp == op.Rtemp);
         case VSTRING: return Value(Stemp == op.Stemp);
-        case VCHAR: return Value(Ctemp == op.Ctemp);
-        case VBOOL: return Value(Btemp == op.Btemp);
-        default: return Value();
+        case VCHAR:   return Value(Ctemp == op.Ctemp);
+        case VBOOL:   return Value(Btemp == op.Btemp);
+        default:      return Value(); // Error
     }
 }
 
-// != Operator
+// Inequality
 Value Value::operator!=(const Value& op) const {
-    Value eq = (*this) == op;
-    if (eq.IsErr()) return eq;
-    return Value(!eq.GetBool());
+    if (T != op.T) return Value(true);
+    switch (T) {
+        case VINT:    return Value(Itemp != op.Itemp);
+        case VREAL:   return Value(Rtemp != op.Rtemp);
+        case VSTRING: return Value(Stemp != op.Stemp);
+        case VCHAR:   return Value(Ctemp != op.Ctemp);
+        case VBOOL:   return Value(Btemp != op.Btemp);
+        default:      return Value(); // Error
+    }
 }
 
-// > Operator
+// Greater than
 Value Value::operator>(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-    if (T != op.T) return RunTimeErr("Illegal Mixed Type Operands for >");
-
+    if (T != op.T) return Value(); // Error
     switch (T) {
-        case VINT: return Value(Itemp > op.Itemp);
-        case VREAL: return Value(Rtemp > op.Rtemp);
+        case VINT:    return Value(Itemp > op.Itemp);
+        case VREAL:   return Value(Rtemp > op.Rtemp);
         case VSTRING: return Value(Stemp > op.Stemp);
-        case VCHAR: return Value(Ctemp > op.Ctemp);
-        default: return Value();
+        case VCHAR:   return Value(Ctemp > op.Ctemp);
+        default:      return Value(); // Error
     }
 }
 
-// < Operator
+// Less than
 Value Value::operator<(const Value& op) const {
-    if (IsErr() || op.IsErr()) return Value();
-    if (T != op.T) return RunTimeErr("Illegal Mixed Type Operands for <");
-
+    if (T != op.T) return Value(); // Error
     switch (T) {
-        case VINT: return Value(Itemp < op.Itemp);
-        case VREAL: return Value(Rtemp < op.Rtemp);
+        case VINT:    return Value(Itemp < op.Itemp);
+        case VREAL:   return Value(Rtemp < op.Rtemp);
         case VSTRING: return Value(Stemp < op.Stemp);
-        case VCHAR: return Value(Ctemp < op.Ctemp);
-        default: return Value();
+        case VCHAR:   return Value(Ctemp < op.Ctemp);
+        default:      return Value(); // Error
     }
 }
 
-// <= Operator
+// Less than or equal
 Value Value::operator<=(const Value& op) const {
-    Value lt = (*this) < op;
-    Value eq = (*this) == op;
-    if (lt.IsErr() || eq.IsErr()) return Value();
-    return Value(lt.GetBool() || eq.GetBool());
+    if (T != op.T) return Value(); // Error
+    switch (T) {
+        case VINT:    return Value(Itemp <= op.Itemp);
+        case VREAL:   return Value(Rtemp <= op.Rtemp);
+        case VSTRING: return Value(Stemp <= op.Stemp);
+        case VCHAR:   return Value(Ctemp <= op.Ctemp);
+        default:      return Value(); // Error
+    }
 }
 
-// >= Operator
+// Greater than or equal
 Value Value::operator>=(const Value& op) const {
-    Value gt = (*this) > op;
-    Value eq = (*this) == op;
-    if (gt.IsErr() || eq.IsErr()) return Value();
-    return Value(gt.GetBool() || eq.GetBool());
+    if (T != op.T) return Value(); // Error
+    switch (T) {
+        case VINT:    return Value(Itemp >= op.Itemp);
+        case VREAL:   return Value(Rtemp >= op.Rtemp);
+        case VSTRING: return Value(Stemp >= op.Stemp);
+        case VCHAR:   return Value(Ctemp >= op.Ctemp);
+        default:      return Value(); // Error
+    }
 }
 
-// && Operator
+// Logical AND
 Value Value::operator&&(const Value& op) const {
-    if (IsBool() && op.IsBool()) return Value(Btemp && op.Btemp);
-    return RunTimeErr("AND Operator requires Boolean Operands");
+    if (IsBool() && op.IsBool())
+        return Value(Btemp && op.Btemp);
+    return Value(); // Error
 }
 
-// || Operator
+// Logical OR
 Value Value::operator||(const Value& op) const {
-    if (IsBool() && op.IsBool()) return Value(Btemp || op.Btemp);
-    return RunTimeErr("OR Operator requires Boolean Operands");
+    if (IsBool() && op.IsBool())
+        return Value(Btemp || op.Btemp);
+    return Value(); // Error
 }
 
-// ! Operator
+// Logical NOT
 Value Value::operator!() const {
-    if (IsBool()) return Value(!Btemp);
-    return RunTimeErr("NOT Operator requires Boolean Operand");
+    if (IsBool())
+        return Value(!Btemp);
+    return Value(); // Error
 }
 
-// Concat
+// String/char concatenation
 Value Value::Concat(const Value& op) const {
-    if ((IsString() || IsChar()) && (op.IsString() || op.IsChar())) {
-        string left = (IsChar() ? string(1, Ctemp) : Stemp);
-        string right = (op.IsChar() ? string(1, op.Ctemp) : op.Stemp);
-        return Value(left + right);
-    }
-    return RunTimeErr("Concatenation requires String or Character Operands");
+    if (IsString() && op.IsString())
+        return Value(Stemp + op.Stemp);
+    if (IsString() && op.IsChar())
+        return Value(Stemp + string(1, op.Ctemp));
+    if (IsChar() && op.IsString())
+        return Value(string(1, Ctemp) + op.Stemp);
+    if (IsChar() && op.IsChar())
+        return Value(string(1, Ctemp) + string(1, op.Ctemp));
+    return Value(); // Error
 }
 
-// Exp
+// Exponentiation (float base only, as per assignment spec)
 Value Value::Exp(const Value& op) const {
-    if (IsReal() && op.IsInt()) {
-        if (op.Itemp == 0) return Value(1.0);
-        return Value(pow(Rtemp, op.Itemp));
-    }
-    return RunTimeErr("Exponentiation requires Real base and Integer exponent");
+    if (!IsReal()) return Value(); // Only float base supported
+    double base = Rtemp;
+    double exponent = 0.0;
+    if (op.IsInt()) exponent = op.Itemp;
+    else if (op.IsReal()) exponent = op.Rtemp;
+    else return Value(); // Error
+
+    // 0^0 or 0^negative is error
+    if (base == 0.0 && exponent <= 0.0) return Value();
+    // Any^0 = 1
+    if (exponent == 0.0) return Value(1.0);
+    // Negative exponent
+    if (exponent < 0.0) return Value(1.0 / pow(base, -exponent));
+    return Value(pow(base, exponent));
 }
 
