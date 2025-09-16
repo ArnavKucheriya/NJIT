@@ -4,6 +4,8 @@
 
 This repository contains coursework related to Computer Science and other Ying Wu College of Computing (YWCC) courses for the **B.S. in Computer Science** at **New Jersey Institute of Technology (NJIT)**.
 
+(Professors if there are any contents that you would like for me to remove/hide, please contact me at ak2945@njit.edu)
+
 Editor Used: Visual Studio Code (64-bits)
 
 ## Course Information
