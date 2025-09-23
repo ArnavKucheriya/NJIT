@@ -3,11 +3,11 @@
     padding: 20px;
     margin: 20px;
     background-color: #f0f0f0;
-    text-align: center;
+    text-align: center; 
 }
 
 .login-button button {
-    background-color: #4CAF50; /* Green */
+    background-color: #4CAF50;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -18,4 +18,22 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 12px;
+    transition-duration: 0.4s;
+    
+    transition-behavior: ease-in-out;
+    
+    &:hover {
+        background-color: blue;
+    }
+}
+
+#unique-header {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-shadow: 1px 1px 2px #aaa;
+}
+
+#apple {
+    color: red;
+    width: 100px;
 }
