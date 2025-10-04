@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Resume</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="id-block">
+        <h1>Arnav Kucheriya</h1>
+        <p class="sub">
+          Jersey City, NJ · <a href="tel:+17135013114">+1 (713) 501-3114</a> ·
+          <a href="mailto:ArnavKucheriya@outlook.com">ArnavKucheriya@outlook.com</a>
+        </p>
+        <nav class="links">
+          <a href="https://linkedin.com/in/ArnavKucheriya" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/ArnavKucheriya" target="_blank" rel="noopener">GitHub</a>
+          <a href="#contact">Contact</a>
+          <a href="#hobbies">Hobbies</a>
+        </nav>
+      </div>
+      <figure class="avatar">
+        <img src="images/IMG_4699.jpg" alt="Profile photo of Arnav Kucheriya" />
+      </figure>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="summary" class="card">
+      <h2>Summary</h2>
+      <p>
+        Applications & ML-focused developer with experience building RAG/NLQ systems,
+        production CI/CD pipelines, and data-driven web apps. Comfortable across Python,
+        JS/TS, SQL, and cloud tooling; passionate about clean data flows, usable interfaces,
+        and measurable impact.
+      </p>
+    </section>
+
+    <section id="education" class="card">
+      <h2>Education</h2>
+      <article>
+        <h3>New Jersey Institute of Technology (NJIT)</h3>
+        <p class="meta">B.S. / M.S. Computer Science, Minor in Applied Statistics · Sep 2023 – May 2028 · Newark, NJ</p>
+        <ul>
+          <li>Dean’s List Scholar, Highlander Achievement Scholar, Upkar (IACF) Achievement Scholar</li>
+          <li>Vice President — NJIT Badminton</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Work Experience</h2>
+
+      <article>
+        <h3>Applications Development Intern — Cravath, Swaine & Moore LLP</h3>
+        <p class="meta">Jun 2025 – Present · New York City, NY</p>
+        <ul>
+          <li>Built a RAG PoC using semantic search + Ollama to vector-embed real-time SQL data and enable NLQ with generative reporting.</li>
+          <li>Optimized SSRS reporting (perf, accuracy, templates; parameterized queries + cross-verification).</li>
+          <li>Deployed Azure DevOps CI/CD (Node.js setup, automated IIS deployment) across apps.</li>
+          <li>Shipped a secure web app to process unstructured email data for staffing KPIs and edit live SQL records via UI.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Undergraduate Research Assistant — NJIT</h3>
+        <p class="meta">Jun 2024 – Jun 2025 · Newark, NJ</p>
+        <ul>
+          <li>ML models for real-time solar radio burst detection to support space-weather prediction.</li>
+          <li>Data prep with Pandas/NumPy/Scikit-learn; validation with TensorFlow for robust analytics.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>ML Technology Intern — Isotropic Solutions Inc.</h3>
+        <p class="meta">Sep 2024 – Feb 2025 · New York City, NY</p>
+        <ul>
+          <li>Launched ML-driven HR recruitment platform (CBO): Python + PostgreSQL, NLP resume parsing, analytics dashboards.</li>
+          <li>Automated data ingestion/validation for SBV with high availability & fault tolerance.</li>
+          <li>Built REST API (FastAPI + Postgres), tests, and CI/CD for continuous delivery.</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Database Automation Engineer Intern — JEI Learning Centers, LLC</h3>
+        <p class="meta">Jan 2024 – Aug 2024 · Jersey City, NJ</p>
+        <ul>
+          <li>Automated ETL with Python/Django/PostgreSQL (−40% processing time).</li>
+          <li>Synced multi-platform databases with 100% integrity.</li>
+          <li>Integrated user data into Keap/Hi-Sawyer/Wix to boost campaign targeting.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+      <article>
+        <h3>Market Prediction with ML</h3>
+        <p class="meta">Python, yfinance, Pandas, Matplotlib, AWS, .NET</p>
+        <ul>
+          <li>Predictive models (e.g., linear regression, decision trees) with visual insights for investment strategies.</li>
+          <li>Deployed components on AWS and Google Cloud.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>Character-Level Language Modeling with Transformers</h3>
+        <p class="meta">Python, TensorFlow, Pandas, CI/CD</p>
+        <ul>
+          <li>Statistical Bigram + GPT-style Transformer on Shakespeare; custom GPU loop with loss/perplexity + memory tracking.</li>
+          <li>Implemented multi-head self-attention, layer norm, positional embeddings.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Skills</h2>
+      <ul class="cols">
+        <li>Python, C/C++, C (assemblies), JavaScript/TypeScript, SQL (Postgres), Java, Rust</li>
+        <li>React, Node.js, Flask, FastAPI, HTML/CSS</li>
+        <li>Docker, Linux, Git, Azure DevOps, Jenkins, SSRS</li>
+        <li>PyTorch, CUDA, AWS Bedrock, LangChain, FAISS, Pandas</li>
+      </ul>
+    </section>
+
+    <section id="awards" class="card">
+      <h2>Awards & Certifications</h2>
+      <ul>
+        <li>AWS Cloud Practitioner (In Progress)</li>
+        <li>Google Cyber Security — Google</li>
+        <li>Python Programming — OpenEDG Institute</li>
+        <li>Generative AI Fundamentals — Microsoft</li>
+      </ul>
+    </section>
+
+    <section id="hobbies" class="card">
+      <h2>Hobbies</h2>
+      <p>Badminton, open-source ML tooling, UI prototyping, and data visualization experiments.</p>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li>Email: <a href="mailto:ArnavKucheriya@outlook.com">ArnavKucheriya@outlook.com</a></li>
+        <li>Phone: <a href="tel:+17135013114">+1 (713) 501-3114</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/ArnavKucheriya" target="_blank" rel="noopener">linkedin.com/in/ArnavKucheriya</a></li>
+        <li>GitHub: <a href="https://github.com/ArnavKucheriya" target="_blank" rel="noopener">github.com/ArnavKucheriya</a></li>
+      </ul>
+    </section>
+  </main>
+
+    <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Arnav Kucheriya. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
