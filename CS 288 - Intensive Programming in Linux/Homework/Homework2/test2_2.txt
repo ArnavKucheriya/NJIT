@@ -1,0 +1,10 @@
+John Doe, 1990-07-15, New York, USA
+Jane Smith, 1985-05-20, Los Angeles, USA
+Robert Johnson, 1975-10-01, Las Vegas, USA
+Maria Garcia, 2000-12-31, San Francisco, USA
+James Brown, 1982-04-10, Salt Lake City, USA
+Patricia Davis, 1995-02-28, Toronto, Canada
+Jennifer Wilson, 1978-03-19, Vancouver, Canada
+Linda Jones, 1980-08-08, Rio de Janeiro, Brazil
+William Rodriguez, 2001-01-01, Buenos Aires, Argentina
+Michael Martinez, 1999-06-06, Mexico City, Mexico
