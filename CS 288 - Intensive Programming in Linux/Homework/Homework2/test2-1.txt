@@ -1,0 +1,9 @@
+Hello World! This is a test file.
+We have some dates here: 12/25/2023, 07-04-2022.
+And here are some more: 01.01.2021, 11/11/2021.
+This file has some dates scattered around.
+For instance, this one: 10/31/2023.
+And this one here: 05-06-2022.
+Don't forget about this one: 02.14.2021.
+Dates? Sure, we have plenty of dates.
+Here are a few: 09/09/2023, 03-17-2022, 01.31.2021, 12/31/2021.
