@@ -1,0 +1,395 @@
+Project 1 for CS 341
+Section number: 005
+Semester: Fall 2025
+Written by: Arnav Kucheriya, ak2945
+Instructor: Marvin Nakayama, marvin@njit.edu
+
+21
+Enter string 1 of 21
+20
+q1 --[2]--> qT
+qT --[0]--> qT
+REJECTED
+
+Enter string 2 of 21
+njit@njit.net
+q1 --[n]--> q2
+q2 --[j]--> q2
+q2 --[i]--> q2
+q2 --[t]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[j]--> q5
+q5 --[i]--> q5
+q5 --[t]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+ACCEPTED
+
+Enter string 3 of 21
+b@d.net
+q1 --[b]--> q2
+q2 --[@]--> q4
+q4 --[d]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+ACCEPTED
+
+Enter string 4 of 21
+tuv@wxyz.ne
+q1 --[t]--> q2
+q2 --[u]--> q2
+q2 --[v]--> q2
+q2 --[@]--> q4
+q4 --[w]--> q5
+q5 --[x]--> q5
+q5 --[y]--> q5
+q5 --[z]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+ACCEPTED
+
+Enter string 5 of 21
+opqr@.net
+q1 --[o]--> q2
+q2 --[p]--> q2
+q2 --[q]--> q2
+q2 --[r]--> q2
+q2 --[@]--> q4
+q4 --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 6 of 21
+web.rstuv.b.net.cdef@ne.net.n.njit.net
+q1 --[w]--> q2
+q2 --[e]--> q2
+q2 --[b]--> q2
+q2 --[.]--> q3
+q3 --[r]--> q2
+q2 --[s]--> q2
+q2 --[t]--> q2
+q2 --[u]--> q2
+q2 --[v]--> q2
+q2 --[.]--> q3
+q3 --[b]--> q2
+q2 --[.]--> q3
+q3 --[n]--> q2
+q2 --[e]--> q2
+q2 --[t]--> q2
+q2 --[.]--> q3
+q3 --[c]--> q2
+q2 --[d]--> q2
+q2 --[e]--> q2
+q2 --[f]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[e]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[.]--> qT
+qT --[n]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[j]--> qT
+qT --[i]--> qT
+qT --[t]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 7 of 21
+nn@nnn.net..net
+q1 --[n]--> q2
+q2 --[n]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[n]--> q5
+q5 --[n]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[.]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 8 of 21
+zyx.w.@phone.net
+q1 --[z]--> q2
+q2 --[y]--> q2
+q2 --[x]--> q2
+q2 --[.]--> q3
+q3 --[w]--> q2
+q2 --[.]--> q3
+q3 --[@]--> qT
+qT --[p]--> qT
+qT --[h]--> qT
+qT --[o]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 9 of 21
+net@network.net.
+q1 --[n]--> q2
+q2 --[e]--> q2
+q2 --[t]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[e]--> q5
+q5 --[t]--> q5
+q5 --[w]--> q5
+q5 --[o]--> q5
+q5 --[r]--> q5
+q5 --[k]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[.]--> qT
+REJECTED
+
+Enter string 10 of 21
+yellow@abc.net.netnet
+q1 --[y]--> q2
+q2 --[e]--> q2
+q2 --[l]--> q2
+q2 --[l]--> q2
+q2 --[o]--> q2
+q2 --[w]--> q2
+q2 --[@]--> q4
+q4 --[a]--> q5
+q5 --[b]--> q5
+q5 --[c]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 11 of 21
+rand@net
+q1 --[r]--> q2
+q2 --[a]--> q2
+q2 --[n]--> q2
+q2 --[d]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[e]--> q5
+q5 --[t]--> q5
+REJECTED
+
+Enter string 12 of 21
+r.ewq@g.net.ne.nev
+q1 --[r]--> q2
+q2 --[.]--> q3
+q3 --[e]--> q2
+q2 --[w]--> q2
+q2 --[q]--> q2
+q2 --[@]--> q4
+q4 --[g]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[v]--> qT
+REJECTED
+
+Enter string 13 of 21
+www@net.netr
+q1 --[w]--> q2
+q2 --[w]--> q2
+q2 --[w]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[e]--> q5
+q5 --[t]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[r]--> qT
+REJECTED
+
+Enter string 14 of 21
+wwwc@net.ne
+q1 --[w]--> q2
+q2 --[w]--> q2
+q2 --[w]--> q2
+q2 --[c]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[e]--> q5
+q5 --[t]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+ACCEPTED
+
+Enter string 15 of 21
+.five@six.net
+q1 --[.]--> qT
+qT --[f]--> qT
+qT --[i]--> qT
+qT --[v]--> qT
+qT --[e]--> qT
+qT --[@]--> qT
+qT --[s]--> qT
+qT --[i]--> qT
+qT --[x]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 16 of 21
+netting@ne.net@
+q1 --[n]--> q2
+q2 --[e]--> q2
+q2 --[t]--> q2
+q2 --[t]--> q2
+q2 --[i]--> q2
+q2 --[n]--> q2
+q2 --[g]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[e]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[@]--> qT
+REJECTED
+
+Enter string 17 of 21
+nest@nest.ne.nett
+q1 --[n]--> q2
+q2 --[e]--> q2
+q2 --[s]--> q2
+q2 --[t]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[e]--> q5
+q5 --[s]--> q5
+q5 --[t]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[t]--> qT
+REJECTED
+
+Enter string 18 of 21
+n.neat.n@n.net.ne
+q1 --[n]--> q2
+q2 --[.]--> q3
+q3 --[n]--> q2
+q2 --[e]--> q2
+q2 --[a]--> q2
+q2 --[t]--> q2
+q2 --[.]--> q3
+q3 --[n]--> q2
+q2 --[@]--> q4
+q4 --[n]--> q5
+q5 --[.]--> q6
+q6 --[n]--> q7
+q7 --[e]--> q8
+q8 --[t]--> q9
+q9 --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+REJECTED
+
+Enter string 19 of 21
+@mnop.net
+q1 --[@]--> qT
+qT --[m]--> qT
+qT --[n]--> qT
+qT --[o]--> qT
+qT --[p]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 20 of 21
+xyzz.bcde.neon@.net
+q1 --[x]--> q2
+q2 --[y]--> q2
+q2 --[z]--> q2
+q2 --[z]--> q2
+q2 --[.]--> q3
+q3 --[b]--> q2
+q2 --[c]--> q2
+q2 --[d]--> q2
+q2 --[e]--> q2
+q2 --[.]--> q3
+q3 --[n]--> q2
+q2 --[e]--> q2
+q2 --[o]--> q2
+q2 --[n]--> q2
+q2 --[@]--> q4
+q4 --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
+
+Enter string 21 of 21
+abcd..efg@fort.net
+q1 --[a]--> q2
+q2 --[b]--> q2
+q2 --[c]--> q2
+q2 --[d]--> q2
+q2 --[.]--> q3
+q3 --[.]--> qT
+qT --[e]--> qT
+qT --[f]--> qT
+qT --[g]--> qT
+qT --[@]--> qT
+qT --[f]--> qT
+qT --[o]--> qT
+qT --[r]--> qT
+qT --[t]--> qT
+qT --[.]--> qT
+qT --[n]--> qT
+qT --[e]--> qT
+qT --[t]--> qT
+REJECTED
