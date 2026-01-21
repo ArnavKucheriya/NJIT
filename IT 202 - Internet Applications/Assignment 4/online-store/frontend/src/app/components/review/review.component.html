@@ -1,0 +1,50 @@
+<h2 class="my-4">Review Your Order</h2>
+
+<div *ngIf="loading" class="alert alert-info">
+  Loading selected product...
+</div>
+
+<div *ngIf="error" class="alert alert-danger">
+  {{ error }}
+</div>
+
+<div *ngIf="orderMessage" class="alert alert-success">
+  {{ orderMessage }}
+</div>
+
+<div *ngIf="product && !loading" class="card mb-4">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img
+        [src]="product.image"
+        class="img-fluid rounded-start"
+        [alt]="product.name"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <p class="card-text">{{ product.description }}</p>
+        <p class="card-text fw-bold">
+          Price: ${{ product.price | number : '1.2-2' }}
+        </p>
+
+        <div class="mt-auto">
+          <button
+            class="btn btn-secondary me-2"
+            (click)="backToProducts()"
+          >
+            Back
+          </button>
+          <button
+            class="btn btn-success"
+            (click)="onSubmitOrder()"
+            [disabled]="submitting"
+          >
+            {{ submitting ? 'Submitting...' : 'Submit Order' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
