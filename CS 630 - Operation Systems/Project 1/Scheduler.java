@@ -24,9 +24,7 @@
 
 public class Scheduler {
 
-    // -------------------------------------------------------------------------
     // Program IDs
-    // -------------------------------------------------------------------------
     static final int PA = 0, PB = 1, PC = 2;
 
     // Priority: lower number = higher priority. PA=2, PB=3, PC=1
@@ -34,9 +32,7 @@ public class Scheduler {
     // Total ticks each program needs to finish
     static final int[]    NEED = {10, 7, 5};
 
-    // -------------------------------------------------------------------------
     // Process table (parallel arrays, max 300 processes)
-    // -------------------------------------------------------------------------
     static final int MAX = 300;
     static int[]    prog  = new int[MAX];     // program this process runs
     static int[]    rem   = new int[MAX];     // remaining ticks
@@ -47,9 +43,7 @@ public class Scheduler {
     static int      np    = 0;                // number of processes created
     static int      pctr  = 0;                // counter for naming (P1, P2, ...)
 
-    // -------------------------------------------------------------------------
     // Ready queue: simple array, sorted by priority (ascending), FIFO within
-    // -------------------------------------------------------------------------
     static int[] rq   = new int[MAX];
     static int   rqsz = 0;
 
@@ -73,9 +67,7 @@ public class Scheduler {
         return id;
     }
 
-    // -------------------------------------------------------------------------
     // Gantt chart: store every quantum slice separately (do NOT merge)
-    // -------------------------------------------------------------------------
     static int[] gid = new int[10000];   // process index
     static int[] gst = new int[10000];   // start time
     static int[] gen = new int[10000];   // end time
@@ -89,9 +81,7 @@ public class Scheduler {
         gn++;
     }
 
-    // -------------------------------------------------------------------------
     // Create a process and place it on the ready queue
-    // -------------------------------------------------------------------------
     static int mkProc(int program) {
         pctr++;
         int id   = np++;
@@ -105,9 +95,7 @@ public class Scheduler {
         return id;
     }
 
-    // -------------------------------------------------------------------------
     // Main simulation
-    // -------------------------------------------------------------------------
     public static void main(String[] args) {
 
         mkProc(PA);   // P1 runs PA
@@ -122,7 +110,7 @@ public class Scheduler {
             int quantum  = 4;
             int sliceSt  = time;
 
-            // ------ tick loop ------------------------------------------------
+            //  tick loop
             while (quantum > 0 && rem[cur] > 0) {
 
                 // Signal check at the START of this tick.
@@ -169,17 +157,13 @@ public class Scheduler {
             if (!done[cur]) enq(cur);
         }
 
-        // =====================================================================
         // OUTPUT A: Gantt Chart  (format: [start - end] : Pname)
-        // =====================================================================
         System.out.println("--- GANTT CHART ---");
         for (int i = 0; i < gn; i++) {
             System.out.println("[" + gst[i] + " - " + gen[i] + "] : " + name[gid[i]]);
         }
 
-        // =====================================================================
         // OUTPUT B: Total signals received per process
-        // =====================================================================
         System.out.println("\n--- SIGNALS RECEIVED ---");
         for (int i = 0; i < np; i++) {
             System.out.println(name[i] + " received " + sigs[i] + " signal(s)");
