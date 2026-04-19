@@ -1,0 +1,71 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4096 (0x1000)
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, ST=NJ, L=Newark, O=NJIT, OU=CS645, CN=Grimm/emailAddress=gc359@njit.edu
+        Validity
+            Not Before: Apr 12 00:00:00 2026 GMT
+            Not After : Apr 12 00:00:00 2027 GMT
+        Subject: C=US, ST=NJ, O=NJIT, OU=CS645, CN=PKILabServer.com/emailAddress=gc359@njit.edu
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:c3:1a:c7:5a:e0:81:57:a2:5b:c3:01:b2:59:44:
+                    6c:2f:bd:b4:9b:f6:bd:e2:0a:b9:cd:8c:07:95:6a:
+                    61:3c:61:04:94:8b:30:0c:ab:62:b5:b8:9e:c9:86:
+                    30:dc:09:b8:86:40:be:dd:7c:b0:00:b3:ca:e6:3c:
+                    e3:8d:00:48:dd:7e:ab:4d:0c:8a:2e:60:70:a2:62:
+                    5e:cb:35:09:01:cd:b0:8d:f9:7e:7a:e4:8a:77:06:
+                    42:93:57:d6:87:ac:98:e8:98:06:a2:9a:fb:d8:c8:
+                    19:00:be:12:98:f6:b8:e1:41:07:35:bd:20:1f:8a:
+                    e3:14:02:94:de:92:2f:6d:fb
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                47:2D:51:79:73:AD:15:45:37:9E:BE:70:88:43:E0:F1:C9:CE:01:29
+            X509v3 Authority Key Identifier: 
+                keyid:56:FF:87:83:34:E1:67:23:6F:85:E6:38:AA:FA:71:91:DF:C1:2D:65
+
+    Signature Algorithm: sha256WithRSAEncryption
+         2e:14:ae:9f:9a:ed:8f:23:15:fd:a0:3f:38:a1:75:52:cd:15:
+         b1:c6:06:1e:3c:d8:09:17:b5:05:47:74:0e:8d:86:37:d7:4f:
+         74:16:47:7a:17:22:bf:da:e8:95:52:30:00:8d:70:1e:44:5f:
+         a7:4e:da:62:6c:c3:b8:77:bf:7a:ef:13:05:8a:83:18:0b:e2:
+         e9:77:80:f9:19:c6:f6:61:92:96:b4:c9:e0:40:10:1a:ea:6e:
+         ec:c1:c6:48:10:52:2d:f2:a2:3e:5a:61:02:9d:8d:a3:5f:0a:
+         d4:4a:1a:74:ab:dc:e4:45:32:7a:15:b7:49:46:62:c8:62:c2:
+         9a:33:4d:e3:92:ae:6b:e0:64:04:66:af:77:44:1c:e3:5b:59:
+         8b:49:b2:c8:69:2a:18:c7:ac:4f:3c:48:4c:6a:20:93:8d:ed:
+         19:79:bc:52:49:43:b8:ef:6f:54:b7:fd:b1:c6:61:3a:ca:47:
+         c5:b8:1b:97:77:17:d3:f4:22:c1:d2:fb:48:77:4c:9d:1b:70:
+         a4:98:ab:9f:c5:10:71:ca:f7:02:96:fa:fd:4d:d8:5f:ad:40:
+         11:e0:8f:36:03:05:e7:63:0e:35:15:18:05:3e:9a:f2:a0:75:
+         bf:87:e4:d6:7a:91:10:d0:09:19:83:97:6e:21:13:bb:3f:0a:
+         cb:7a:62:5f
+-----BEGIN CERTIFICATE-----
+MIIDXzCCAkegAwIBAgICEAAwDQYJKoZIhvcNAQELBQAweTELMAkGA1UEBhMCVVMx
+CzAJBgNVBAgMAk5KMQ8wDQYDVQQHDAZOZXdhcmsxDTALBgNVBAoMBE5KSVQxDjAM
+BgNVBAsMBUNTNjQ1MQ4wDAYDVQQDDAVHcmltbTEdMBsGCSqGSIb3DQEJARYOZ2Mz
+NTlAbmppdC5lZHUwHhcNMjYwNDEyMDAwMDAwWhcNMjcwNDEyMDAwMDAwWjBzMQsw
+CQYDVQQGEwJVUzELMAkGA1UECAwCTkoxDTALBgNVBAoMBE5KSVQxDjAMBgNVBAsM
+BUNTNjQ1MRkwFwYDVQQDDBBQS0lMYWJTZXJ2ZXIuY29tMR0wGwYJKoZIhvcNAQkB
+Fg5nYzM1OUBuaml0LmVkdTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwxrH
+WuCBV6JbwwGyWURsL720m/a94gq5zYwHlWphPGEElIswDKtitbieyYYw3Am4hkC+
+3XywALPK5jzjjQBI3X6rTQyKLmBwomJeyzUJAc2wjfl+euSKdwZCk1fWh6yY6JgG
+opr72MgZAL4SmPa44UEHNb0gH4rjFAKU3pIvbfsCAwEAAaN7MHkwCQYDVR0TBAIw
+ADAsBglghkgBhvhCAQ0EHxYdT3BlblNTTCBHZW5lcmF0ZWQgQ2VydGlmaWNhdGUw
+HQYDVR0OBBYEFEctUXlzrRVFN56+cIhD4PHJzgEpMB8GA1UdIwQYMBaAFFb/h4M0
+4Wcjb4XmOKr6cZHfwS1lMA0GCSqGSIb3DQEBCwUAA4IBAQAuFK6fmu2PIxX9oD84
+oXVSzRWxxgYePNgJF7UFR3QOjYY31090Fkd6FyK/2uiVUjAAjXAeRF+nTtpibMO4
+d7967xMFioMYC+Lpd4D5Gcb2YZKWtMngQBAa6m7swcZIEFIt8qI+WmECnY2jXwrU
+Shp0q9zkRTJ6FbdJRmLIYsKaM03jkq5r4GQEZq93RBzjW1mLSbLIaSoYx6xPPEhM
+aiCTje0ZebxSSUO4729Ut/2xxmE6ykfFuBuXdxfT9CLB0vtId0ydG3CkmKufxRBx
+yvcClvr9TdhfrUAR4I82AwXnYw41FRgFPpryoHW/h+TWepEQ0AkZg5duIRO7PwrL
+emJf
+-----END CERTIFICATE-----
